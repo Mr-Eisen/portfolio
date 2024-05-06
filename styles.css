@@ -6,7 +6,6 @@
 article {
   overflow: hidden;
 }
-
 .banner {
   position: relative;
   height: 100vh;
@@ -14,42 +13,48 @@ article {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  .banner-top {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 45px 0;
-    z-index: 1;
-    color: #fff;
-    font: 400 16px "quasimoda", sans-serif;
-    @media (max-width: 767px) {
-      left: 27px;
-    }
-    a {
-      color: #fff;
-      text-decoration: none;
-      position: relative;
-      z-index: 2;
-      display: none;
-      @media (min-width: 768px) {
-        display: inline;
-      }
-    }
-    svg {
-      position: absolute;
-      top: calc(50% - 50px);
-      left: calc(50% - 142px);
-    }
-  }
-  .bottom-mobile {
-    position: absolute;
-    bottom: 57px;
+}
+.banner .banner-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 45px 0;
+  z-index: 9;
+  color: #fff;
+  font: 400 16px "quasimoda", sans-serif;
+}
+@media (max-width: 767px) {
+  .banner .banner-top {
     left: 27px;
-    color: #fff;
-    font: 400 16px "quasimoda", sans-serif;
-    @media (min-width: 768px) {
-      display: none;
-    }
+  }
+}
+.banner .banner-top a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+  display: none;
+}
+@media (min-width: 768px) {
+  .banner .banner-top a {
+    display: inline;
+  }
+}
+.banner .banner-top svg {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 142px);
+}
+.banner .bottom-mobile {
+  position: absolute;
+  bottom: 57px;
+  left: 27px;
+  color: #fff;
+  font: 400 16px "quasimoda", sans-serif;
+}
+@media (min-width: 768px) {
+  .banner .bottom-mobile {
+    display: none;
   }
 }
 .banner video {
@@ -61,16 +66,16 @@ article {
   object-fit: cover;
   z-index: 0;
 }
-.banner:after{
-  content:"";
-  background-image:url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+.banner:after {
+  content: "";
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
   top: 0;
   left: 0;
   height: 300%;
   width: 300%;
   position: absolute;
   z-index: 1;
-  opacity:0.1;
+  opacity: 0.1;
   animation: animateGrain 8s steps(10) infinite;
 }
 .banner-text {
@@ -81,29 +86,31 @@ article {
   font: 600 117px "quasimoda", sans-serif;
   letter-spacing: -1.172px;
   text-transform: uppercase;
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  .banner-text {
     font-size: 56px;
   }
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 55px;
-    height: 55px;
-    background: url("static/corner_top.svg") 0 0 no-repeat;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 2;
-    width: 55px;
-    height: 55px;
-    background: url("static/corner_bottom.svg") 0 0 no-repeat;
-  }
+}
+.banner-text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 55px;
+  height: 55px;
+  background: url("static/corner_top.svg") 0 0 no-repeat;
+}
+.banner-text:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  width: 55px;
+  height: 55px;
+  background: url("static/corner_bottom.svg") 0 0 no-repeat;
 }
 .grain {
   background: url("static/grain.svg") 0 0 no-repeat;
@@ -123,15 +130,17 @@ article {
 .banner-text .line {
   display: flex;
   align-items: center;
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  .banner-text .line {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 10px;
-    span {
-      display: block;
-      width: 100%;
-      margin-bottom: 15px;
-    }
+  }
+  .banner-text .line span {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
   }
 }
 .banner-text .line:first-of-type,
@@ -143,7 +152,9 @@ article {
   font-style: italic;
   text-transform: none;
   letter-spacing: 1px;
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  .banner-text .small {
     font-size: 24px;
     margin-bottom: 15px;
   }
@@ -155,9 +166,8 @@ article {
   margin-left: 20px;
   top: -20px;
 }
-
 .wave_blue {
-  position:relative;
+  position: relative;
   display: block;
 }
 .wave_blue:before {
@@ -170,346 +180,351 @@ article {
   height: 244px;
   background: url("static/wave_blue.svg") 0 0 no-repeat;
 }
-
-@keyframes animateGrain{
-  0%, 100% { transform:translate(0, 0) }
-  10%{
-    transform:translate(-5%,-10%)
+@keyframes animateGrain {
+  0%,
+  100% {
+    transform: translate(0, 0);
   }
-  20%{
-    transform:translate(-15%,-20%)
+  10% {
+    transform: translate(-5%, -10%);
   }
-  30%{
-    transform:translate(-5%,-10%)
+  20% {
+    transform: translate(-15%, -20%);
   }
-  40%{
-    transform:translate(-15%,-20%)
+  30% {
+    transform: translate(-5%, -10%);
   }
-
-  50%{
-    transform:translate(-5%,-10%)
+  40% {
+    transform: translate(-15%, -20%);
   }
-  60%{
-    transform:translate(-15%,-20%)
+  50% {
+    transform: translate(-5%, -10%);
   }
-  70%{
-    transform:translate(-5%,-10%)
+  60% {
+    transform: translate(-15%, -20%);
   }
-  80%{
-    transform:translate(-15%,-20%)
+  70% {
+    transform: translate(-5%, -10%);
   }
-  90%{
-    transform:translate(-5%,-10%)
+  80% {
+    transform: translate(-15%, -20%);
   }
-  100%{
-    transform:translate(-15%,-20%)
+  90% {
+    transform: translate(-5%, -10%);
   }
-
+  100% {
+    transform: translate(-15%, -20%);
+  }
 }
-
 main {
   position: relative;
   padding-top: 80px;
-  #banner-circle-bottom {
-    position: absolute;
-    top: -148px;
-    left: 0;
-    z-index: 1;
-  }
 }
-
+main #banner-circle-bottom {
+  position: absolute;
+  top: -148px;
+  left: 0;
+  z-index: 1;
+}
 .section {
   margin: 0 auto 80px;
   padding: 100px 0;
   max-width: 730px;
-  @media (max-width: 991px) {
+}
+@media (max-width: 991px) {
+  .section {
     padding: 50px 0;
     margin: 0 auto 40px;
   }
-  &.description {
-    .grid-bg1, .grid-bg2 {
-      position: absolute;
-      z-index: 0;
-    }
-    .grid-bg1 {
-      top: 75px;
-      left: -230px;
-    }
-    .grid-bg2 {
-      top: 0;
-      right: -230px;
-    }
-    p {
-      font: 300 18px "quasimoda", sans-serif;
-      line-height: 1.5;
-      color: #000;
-      margin-bottom: 30px;
-    }
-    strong {
-      font-weight: 600;
-    }
-    a {
-      display: inline-block;
-      margin: 0 0 0 auto;
-      text-transform: uppercase;
-      text-decoration: none;
-      font: 600 14px "quasimoda", sans-serif;
-      line-height: 1.2;
-      color: #131313;
-      svg {
-        margin-right: 10px;
-      }
-      span {
-        display: inline-block;
-        border-bottom: 1px solid #000;
-      }
-    }
-  }
-  &.portfolio {
-    padding-top: 0;
-    margin-top: 0;
-    p {
-      font: 300 18px "quasimoda", sans-serif;
-      line-height: 1.7;
-      color: #2C067E;
-      margin-bottom: 35px;
-      a {
-        color: #7B54CE;
-        text-decoration: none;
-        font-weight: 600;
-        display: inline-block;
-        border: 1px solid #DC44F4;
-        border-radius: 40px;
-        padding: 0 5px;
-        line-height: 1.2;
-        position: relative;
-        top: -1px;
-        &.filled {
-          color: #fff;
-          border-color: transparent;
-          background: linear-gradient(90deg, rgba(220, 68, 244, 1) 30%, rgba(193, 99, 238, 1) 50%, rgba(60, 2, 182, 1) 80%);
-        }
-        span {
-          position: relative;
-          top: 1px;
-        }
-      }
-    }
-    .button {
-      background: linear-gradient(90deg, rgba(44,6,126,1) 11%, rgba(123,84,206,1) 50%, rgba(44,6,126,1) 90%);
-      color: #fff;
-      padding: 16px 22px 14px;
-      font: 600 14px/30px "quasimoda", sans-serif;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-  }
 }
-
+.section.description .grid-bg1,
+.section.description .grid-bg2 {
+  position: absolute;
+  z-index: 0;
+}
+.section.description .grid-bg1 {
+  top: 75px;
+  left: -230px;
+}
+.section.description .grid-bg2 {
+  top: 0;
+  right: -230px;
+}
+.section.description p {
+  font: 300 18px "quasimoda", sans-serif;
+  line-height: 1.5;
+  color: #000;
+  margin-bottom: 30px;
+}
+.section.description strong {
+  font-weight: 600;
+}
+.section.description a {
+  display: inline-block;
+  margin: 0 0 0 auto;
+  text-transform: uppercase;
+  text-decoration: none;
+  font: 600 14px "quasimoda", sans-serif;
+  line-height: 1.2;
+  color: #131313;
+}
+.section.description a svg {
+  margin-right: 10px;
+}
+.section.description a span {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+}
+.section.portfolio {
+  padding-top: 0;
+  margin-top: 0;
+}
+.section.portfolio p {
+  font: 300 18px "quasimoda", sans-serif;
+  line-height: 1.7;
+  color: #2C067E;
+  margin-bottom: 35px;
+}
+.section.portfolio p a {
+  color: #7B54CE;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid #DC44F4;
+  border-radius: 40px;
+  padding: 0 5px;
+  line-height: 1.2;
+  position: relative;
+  top: -1px;
+}
+.section.portfolio p a.filled {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(90deg, #dc44f4 30%, #c163ee 50%, #3c02b6 80%);
+}
+.section.portfolio p a span {
+  position: relative;
+  top: 1px;
+}
+.section.portfolio .button {
+  background: linear-gradient(90deg, #2c067e 11%, #7b54ce 50%, #2c067e 90%);
+  color: #fff;
+  padding: 16px 22px 14px;
+  font: 600 14px/30px "quasimoda", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 footer {
   overflow: hidden;
   background-color: #000;
   padding: 100px 0 40px;
   color: #fff;
   position: relative;
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  footer {
     padding: 60px 0 40px;
   }
-  &:after{
-    content:"";
-    background-image:url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
-    top: 0;
-    left: 0;
-    height: 300%;
-    width: 300%;
-    position: absolute;
-    z-index: 1;
-    opacity:0.1;
-    animation: animateGrain 8s steps(10) infinite;
-  }
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-  }
-  .contacts {
-    position: relative;
-    z-index: 9;
-    display: grid;
-    grid-template-columns: fit-content(480px) 170px 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    column-gap: 30px;
-    row-gap: 105px;
-    align-items: center;
-    grid-template-areas:
-    "connect line email phone ."
-    ". . designer designer social";
-    @media (max-width: 1440px) {
-      grid-template-areas:
-    "connect line email phone phone"
-    ". . designer designer social";
-    }
-    @media (max-width: 1400px) {
-      grid-template-areas:
-      "connect line email phone phone"
-      ". designer designer designer social";
-    }
-    @media (max-width: 1199px) {
-      grid-template-columns: fit-content(480px) 100px 1fr 1fr 1fr;
-    }
-    @media (max-width: 991px) {
-      grid-template-areas:
-      "connect connect connect email phone"
-      "designer designer designer designer social";
-    }
-    @media (max-width: 768px) {
-      text-align: center;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      row-gap: 30px;
-      justify-items: center;
-      grid-template-areas:
-      "connect connect connect connect connect"
-      "email email email email email"
-      "phone phone phone phone phone"
-      "designer designer designer designer designer"
-      "social social social social social";
-    }
-    .connect {
-      grid-area: connect;
-    }
-    .line {
-      grid-area: line;
-      align-self: start;
-    }
-    .email {
-      grid-area: email;
-    }
-    .phone {
-      grid-area: phone;
-    }
-    .designer {
-      grid-area: designer;
-    }
-    .social {
-      grid-area: social;
-    }
-  }
-  a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .connect {
-    font: 600 48px "quasimoda", sans-serif;
-    position: relative;
-    text-transform: uppercase;
-  }
-  .line {
-    margin-top: 10px;
-    height: 1px;
-    background-color: #fff;
-  }
-  .info {
-    margin-top: -5px;
-    font: 300 18px "quasimoda", sans-serif;
-    line-height: 1.5;
-  }
-  .designer {
-    font: 300 18px "ivypresto-display", sans-serif;
-    font-style: italic;
-    line-height: 28px;
-    @media (min-width: 1366px) {
-      margin-right: 15px;
-    }
-    @media (max-width: 1440px) {
-      font-size: 16px;
-    }
-    @media (min-width: 992px) and (max-width: 1199px) {
-      br {
-        display: none;
-      }
-    }
-  }
-  .social {
-    display: flex;
-    a {
-      display: block;
-      margin: 0 9px;
-    }
-  }
-  @media (max-width: 1399px) {
-    .connect {
-      font-size: 40px;
-    }
-    .info {
-      font-size: 15px;
-    }
-  }
-  @media (max-width: 1199px) {
-    .connect {
-      font-size: 36px;
-    }
-    .info {
-      font-size: 14px;
-    }
-  }
-  @media (max-width: 991px) {
-    .connect {
-      font-size: 28px;
-    }
-    .line {
-      display: none;
-    }
+}
+footer:after {
+  content: "";
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+  top: 0;
+  left: 0;
+  height: 300%;
+  width: 300%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.1;
+  animation: animateGrain 8s steps(10) infinite;
+}
+footer video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+footer .contacts {
+  position: relative;
+  z-index: 9;
+  display: grid;
+  grid-template-columns: fit-content(480px) 170px 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 30px;
+  row-gap: 105px;
+  align-items: center;
+  grid-template-areas: "connect line email phone ." ". . designer designer social";
+}
+@media (max-width: 1440px) {
+  footer .contacts {
+    grid-template-areas: "connect line email phone phone" ". . designer designer social";
   }
 }
-
+@media (max-width: 1400px) {
+  footer .contacts {
+    grid-template-areas: "connect line email phone phone" ". designer designer designer social";
+  }
+}
+@media (max-width: 1199px) {
+  footer .contacts {
+    grid-template-columns: fit-content(480px) 100px 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 991px) {
+  footer .contacts {
+    grid-template-areas: "connect connect connect email phone" "designer designer designer designer social";
+  }
+}
+@media (max-width: 768px) {
+  footer .contacts {
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+    justify-items: center;
+    grid-template-areas: "connect connect connect connect connect" "email email email email email" "phone phone phone phone phone" "designer designer designer designer designer" "social social social social social";
+  }
+}
+footer .contacts .connect {
+  grid-area: connect;
+}
+footer .contacts .line {
+  grid-area: line;
+  align-self: start;
+}
+footer .contacts .email {
+  grid-area: email;
+}
+footer .contacts .phone {
+  grid-area: phone;
+}
+footer .contacts .designer {
+  grid-area: designer;
+}
+footer .contacts .social {
+  grid-area: social;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+footer .connect {
+  font: 600 48px "quasimoda", sans-serif;
+  position: relative;
+  text-transform: uppercase;
+}
+footer .line {
+  margin-top: 10px;
+  height: 1px;
+  background-color: #fff;
+}
+footer .info {
+  margin-top: -5px;
+  font: 300 18px "quasimoda", sans-serif;
+  line-height: 1.5;
+}
+footer .designer {
+  font: 300 18px "ivypresto-display", sans-serif;
+  font-style: italic;
+  line-height: 28px;
+}
+@media (min-width: 1366px) {
+  footer .designer {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 1440px) {
+  footer .designer {
+    font-size: 16px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  footer .designer br {
+    display: none;
+  }
+}
+footer .social {
+  display: flex;
+}
+footer .social a {
+  display: block;
+  margin: 0 9px;
+}
+@media (max-width: 1399px) {
+  footer .connect {
+    font-size: 40px;
+  }
+  footer .info {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1199px) {
+  footer .connect {
+    font-size: 36px;
+  }
+  footer .info {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991px) {
+  footer .connect {
+    font-size: 28px;
+  }
+  footer .line {
+    display: none;
+  }
+}
 .portfolio-title-container {
   position: relative;
   height: 180px;
   margin-bottom: 120px;
-  @media (max-width: 991px) {
+}
+@media (max-width: 991px) {
+  .portfolio-title-container {
     height: 100px;
     margin-bottom: 35px;
   }
-  .portfolio-title {
-    left:0;
-    height: 180px;
-    position: absolute;
-    overflow: hidden;
-    @media (max-width: 991px) {
-      height: 100px;
-    }
-    h2 {
-      text-transform: uppercase;
-      font: 400 200px/1 "quasimoda", sans-serif;
-      width:100%;
-      padding-top: 20px;
-      margin:0 auto;
-      white-space: nowrap;
-      @media (max-width: 991px) {
-        font-size: 100px;
-      }
-      span {
-        background: linear-gradient(90deg, rgba(220, 68, 244, 1) 30%, rgba(193, 99, 238, 1) 50%, rgba(60, 2, 182, 1) 80%);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        display:inline-block;
-        animation: scrolling-left2 30s linear infinite;
-        animation-delay: 1s;
-        & + span {
-          background: linear-gradient(90deg, rgba(60, 2, 182, 1) 30%, rgba(193, 99, 238, 1) 50%, rgba(220, 68, 244, 1) 80%);
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-        }
-      }
-    }
+}
+.portfolio-title-container .portfolio-title {
+  left: 0;
+  height: 180px;
+  position: absolute;
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  .portfolio-title-container .portfolio-title {
+    height: 100px;
   }
 }
-
+.portfolio-title-container .portfolio-title h2 {
+  text-transform: uppercase;
+  font: 400 200px/1 "quasimoda", sans-serif;
+  width: 100%;
+  padding-top: 20px;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+@media (max-width: 991px) {
+  .portfolio-title-container .portfolio-title h2 {
+    font-size: 100px;
+  }
+}
+.portfolio-title-container .portfolio-title h2 span {
+  background: linear-gradient(90deg, #dc44f4 30%, #c163ee 50%, #3c02b6 80%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  animation: scrolling-left2 30s linear infinite;
+  animation-delay: 1s;
+}
+.portfolio-title-container .portfolio-title h2 span + span {
+  background: linear-gradient(90deg, #3c02b6 30%, #c163ee 50%, #dc44f4 80%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 /* scrolling-left is continuous/repeatly text */
 @keyframes scrolling-left1 {
   0% {
@@ -527,3 +542,4 @@ footer {
     transform: translateX(-200%);
   }
 }
+/*# sourceMappingURL=styles.css.map */
