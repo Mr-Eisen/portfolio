@@ -34,27 +34,6 @@ article {
   border-right: white 1px dotted;
   margin: 0 15px;
 }
-@media not all and (min-resolution: 0.001dpcm) {
-  .banner-text .small {
-    font: 32px "ivypresto-display", sans-serif;
-    font-style: italic;
-    text-transform: none;
-    letter-spacing: 1px;
-  }
-  .banner-text .line:first-of-type .small {
-    position: relative;
-    top: 5px;
-  }
-  .banner-text .line:nth-of-type(2) .small {
-    top: 0;
-  }
-}
-@media not all and (min-resolution: 0.001dpcm) and (max-width: 768px) {
-  .banner-text .small {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-}
 .banner {
   position: relative;
   height: 100vh;
@@ -93,6 +72,7 @@ article {
   position: absolute;
   top: calc(50% - 50px);
   left: calc(50% - 142px);
+  animation: animateCircle 1s;
 }
 .banner .bottom-mobile {
   position: absolute;
@@ -235,7 +215,7 @@ article {
 .wave_blue:after {
   content: "";
   position: absolute;
-  top: -99px;
+  top: -103px;
   left: -110px;
   z-index: 0;
   width: 244px;
@@ -284,10 +264,18 @@ article {
     transform: translate(-15%, -20%);
   }
 }
+@keyframes animateCircle {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 main {
   position: relative;
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 @media (max-width: 991px) {
   main {
@@ -301,7 +289,7 @@ main #banner-circle-bottom {
   z-index: 1;
 }
 .section {
-  margin: 0 auto 80px;
+  margin: 0 auto 40px;
   padding: 100px 0;
   max-width: 730px;
 }
@@ -325,7 +313,7 @@ main #banner-circle-bottom {
   right: -230px;
 }
 .section.description p {
-  font: 300 18px "quasimoda", sans-serif;
+  font: 300 18px "Public Sans", sans-serif;
   line-height: 1.5;
   color: #000;
   margin-bottom: 30px;
@@ -356,7 +344,7 @@ main #banner-circle-bottom {
   max-width: 100%;
 }
 .section.portfolio p {
-  font: 300 24px "quasimoda", sans-serif;
+  font: 300 24px "Public Sans", sans-serif;
   line-height: 1.7;
   color: #2C067E;
   margin-bottom: 35px;
@@ -364,12 +352,12 @@ main #banner-circle-bottom {
 .section.portfolio a {
   display: block;
   color: #7B54CE;
-  font: 300 24px/47px "quasimoda", sans-serif;
+  font: 300 24px/47px "Public Sans", sans-serif;
   text-decoration: none;
   font-weight: 600;
   border: 1px solid #DC44F4;
   border-radius: 40px;
-  padding: 3px 15px 0;
+  padding: 0 15px 2px;
   position: relative;
   margin: 0 15px 35px;
   transition: 0.3s all;
@@ -498,7 +486,7 @@ footer .connect {
   text-transform: uppercase;
 }
 footer .line {
-  margin-top: 10px;
+  margin-top: 20px;
   height: 1px;
   background-color: #fff;
 }
@@ -560,7 +548,7 @@ footer .social a {
 }
 .portfolio-title-container {
   position: relative;
-  height: 180px;
+  height: 190px;
   margin-bottom: 120px;
 }
 @media (max-width: 991px) {
@@ -571,7 +559,7 @@ footer .social a {
 }
 .portfolio-title-container .portfolio-title {
   left: 0;
-  height: 180px;
+  height: 190px;
   position: absolute;
   overflow-x: hidden;
 }
@@ -582,9 +570,9 @@ footer .social a {
 }
 .portfolio-title-container .portfolio-title h2 {
   text-transform: uppercase;
-  font: 400 200px/1 "quasimoda", sans-serif;
+  font: 400 200px/1 "Public Sans", sans-serif;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 0;
   margin: 0 auto;
   white-space: nowrap;
 }
@@ -621,6 +609,30 @@ footer .social a {
   }
   100% {
     transform: translateX(-200%);
+  }
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  .banner-text .small {
+    font: 32px "ivypresto-display", sans-serif;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 1px;
+  }
+  .banner-text .line:first-of-type .small {
+    position: relative;
+    top: 5px;
+  }
+  .banner-text .line:nth-of-type(2) .small {
+    top: 0;
+  }
+  footer .line {
+    margin-top: 35px;
+  }
+}
+@media not all and (min-resolution: 0.001dpcm) and (max-width: 768px) {
+  .banner-text .small {
+    font-size: 24px;
+    margin-bottom: 15px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
