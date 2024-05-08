@@ -3,8 +3,57 @@
     max-width: 1440px;
   }
 }
+.ti-cursor {
+  display: none !important;
+}
 article {
   overflow: hidden;
+}
+.grid-decor-container {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  height: 100%;
+  width: calc(100% - 80px);
+  opacity: 0.1;
+  z-index: 2;
+}
+@media (max-width: 991px) {
+  .grid-decor-container {
+    display: none !important;
+  }
+}
+.grid-decor-container.grid-decor-reverse {
+  z-index: 0;
+}
+.grid-decor-container.grid-decor-reverse .grid-decor {
+  border-color: black;
+}
+.grid-decor-container .grid-decor {
+  border-left: white 1px dotted;
+  border-right: white 1px dotted;
+  margin: 0 15px;
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  .banner-text .small {
+    font: 32px "ivypresto-display", sans-serif;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 1px;
+  }
+  .banner-text .line:first-of-type .small {
+    position: relative;
+    top: 5px;
+  }
+  .banner-text .line:nth-of-type(2) .small {
+    top: 0;
+  }
+}
+@media not all and (min-resolution: 0.001dpcm) and (max-width: 768px) {
+  .banner-text .small {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
 }
 .banner {
   position: relative;
@@ -83,13 +132,23 @@ article {
   position: relative;
   z-index: 2;
   color: #fff;
-  font: 600 117px "quasimoda", sans-serif;
+  font: 600 117px/1 "quasimoda", sans-serif;
   letter-spacing: -1.172px;
   text-transform: uppercase;
 }
 @media (max-width: 768px) {
   .banner-text {
     font-size: 56px;
+  }
+}
+@media (min-width: 992px) {
+  .banner-text {
+    min-width: 900px;
+  }
+}
+@media (min-width: 1367px) {
+  .banner-text {
+    min-width: 966px;
   }
 }
 .banner-text:before {
@@ -111,6 +170,9 @@ article {
   width: 55px;
   height: 55px;
   background: url("static/corner_bottom.svg") 0 0 no-repeat;
+}
+.banner-text .invisible {
+  width: 1px;
 }
 .grain {
   background: url("static/grain.svg") 0 0 no-repeat;
@@ -170,15 +232,21 @@ article {
   position: relative;
   display: block;
 }
-.wave_blue:before {
+.wave_blue:after {
   content: "";
   position: absolute;
   top: -99px;
   left: -110px;
-  z-index: 1;
+  z-index: 0;
   width: 244px;
   height: 244px;
+  transform: scale(0.00001);
+  transition: 0.3s all;
   background: url("static/wave_blue.svg") 0 0 no-repeat;
+  background-size: cover;
+}
+.wave_blue[data-typeit-id]:after {
+  transform: scale(1);
 }
 @keyframes animateGrain {
   0%,
@@ -219,6 +287,12 @@ article {
 main {
   position: relative;
   padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (max-width: 991px) {
+  main {
+    padding-bottom: 50px;
+  }
 }
 main #banner-circle-bottom {
   position: absolute;
@@ -278,48 +352,64 @@ main #banner-circle-bottom {
 .section.portfolio {
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 0;
+  max-width: 100%;
 }
 .section.portfolio p {
-  font: 300 18px "quasimoda", sans-serif;
+  font: 300 24px "quasimoda", sans-serif;
   line-height: 1.7;
   color: #2C067E;
   margin-bottom: 35px;
 }
-.section.portfolio p a {
+.section.portfolio a {
+  display: block;
   color: #7B54CE;
+  font: 300 24px/47px "quasimoda", sans-serif;
   text-decoration: none;
   font-weight: 600;
-  display: inline-block;
   border: 1px solid #DC44F4;
   border-radius: 40px;
-  padding: 0 5px;
-  line-height: 1.2;
+  padding: 3px 15px 0;
   position: relative;
-  top: -1px;
+  margin: 0 15px 35px;
+  transition: 0.3s all;
 }
-.section.portfolio p a.filled {
+.section.portfolio a.filled,
+.section.portfolio a:hover {
   color: #fff;
   border-color: transparent;
   background: linear-gradient(90deg, #dc44f4 30%, #c163ee 50%, #3c02b6 80%);
 }
-.section.portfolio p a span {
+.section.portfolio a span {
   position: relative;
   top: 1px;
 }
+.section.portfolio .position-links {
+  margin-bottom: 20px;
+}
 .section.portfolio .button {
-  background: linear-gradient(90deg, #2c067e 11%, #7b54ce 50%, #2c067e 90%);
+  background: #2c067e;
   color: #fff;
   padding: 16px 22px 14px;
   font: 600 14px/30px "quasimoda", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s all;
+}
+.section.portfolio .button:hover {
+  color: #2c067e;
+  outline: 1px solid #2c067e;
+  background: #fff;
 }
 footer {
   overflow: hidden;
-  background-color: #000;
   padding: 100px 0 40px;
   color: #fff;
   position: relative;
+  background: url("static/footer.svg") 0 0 no-repeat;
+  background-size: cover;
 }
 @media (max-width: 768px) {
   footer {
@@ -337,15 +427,6 @@ footer:after {
   z-index: 1;
   opacity: 0.1;
   animation: animateGrain 8s steps(10) infinite;
-}
-footer video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
 }
 footer .contacts {
   position: relative;
@@ -517,7 +598,7 @@ footer .social a {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: inline-block;
-  animation: scrolling-left2 30s linear infinite;
+  animation: scrolling-left2 60s linear infinite;
   animation-delay: 1s;
 }
 .portfolio-title-container .portfolio-title h2 span + span {

@@ -13,6 +13,15 @@
 <body>
 <article>
     <div class="banner">
+        <div class="grid-decor-container d-flex">
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+        </div>
+
         <video id="background-video" autoplay loop muted poster="static/banner.jpg">
             <source src="static/background.mp4" type="video/mp4">
         </video>
@@ -33,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <header class="banner-text">
+        <header class="banner-text d-block d-lg-none">
             <div class="line"><span class="small">Olga bannova</span> senior</div>
             <div class="line">visual <span class="small wave_blue d-none d-md-block">10+ years of experience</span></div>
             <div class="line">designer</div>
@@ -41,9 +50,25 @@
             <div class="grain grain-top"></div>
             <div class="grain grain-bottom"></div>
         </header>
+        <header class="banner-text d-none d-lg-block">
+            <div class="line"><span id="banner-text4" class="small"></span> <span class="invisible">•</span><span id="banner-text1" ></span></div>
+            <div class="line"><span id="banner-text2"></span> <span class="invisible">•</span><span id="banner-text5" class="small wave_blue d-none d-md-block"></span></div>
+            <div class="line"><span class="invisible">•</span><span id="banner-text3"></span></div>
+            <div class="small wave_blue d-md-none">10+ years of experience</div>
+            <div class="grain grain-top"></div>
+            <div class="grain grain-bottom"></div>
+        </header>
         <a class="bottom-mobile" href="mailto:obannova@gmail.com">obannova@gmail.com</a>
     </div>
     <main>
+        <div class="grid-decor-container grid-decor-reverse d-flex">
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+        </div>
         <svg id="banner-circle-bottom" width="162" height="298" viewBox="0 0 162 298" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path opacity="0.39" fill-rule="evenodd" clip-rule="evenodd" d="M-90.8514 253.183C-148.383 195.651 -148.383 102.374 -90.8513 44.8425C-33.3198 -12.6891 59.9572 -12.689 117.489 44.8425C175.02 102.374 175.02 195.651 117.489 253.183C59.9572 310.714 -33.3198 310.714 -90.8514 253.183ZM-91.5584 44.1354C-149.48 102.057 -149.481 195.968 -91.5585 253.89C-33.6364 311.812 60.2738 311.812 118.196 253.89C176.118 195.968 176.118 102.057 118.196 44.1354C60.2738 -13.7866 -33.6364 -13.7867 -91.5584 44.1354ZM-83.4848 245.816C-136.948 192.353 -136.948 105.672 -83.4848 52.2089C-30.0216 -1.25431 56.6593 -1.25427 110.123 52.2089C163.586 105.672 163.586 192.353 110.123 245.816C56.6593 299.279 -30.0216 299.279 -83.4848 245.816ZM-84.1919 51.5018C-138.046 105.355 -138.046 192.67 -84.1919 246.523C-30.3382 300.377 56.9759 300.377 110.83 246.523C164.683 192.67 164.683 105.356 110.83 51.5018C56.9759 -2.35189 -30.3382 -2.35192 -84.1919 51.5018ZM13.3254 22.5256C-56.5301 22.5256 -113.159 79.1547 -113.159 149.01C-113.159 218.866 -56.5301 275.495 13.3254 275.495C83.181 275.495 139.81 218.866 139.81 149.01C139.81 79.1547 83.181 22.5256 13.3254 22.5256ZM-114.159 149.01C-114.159 78.6025 -57.0824 21.5256 13.3254 21.5256C83.7332 21.5256 140.81 78.6025 140.81 149.01C140.81 219.418 83.7332 276.495 13.3254 276.495C-57.0824 276.495 -114.159 219.418 -114.159 149.01ZM-102.758 149.01C-102.758 84.8996 -50.7857 32.9275 13.3251 32.9275C77.4359 32.9275 129.408 84.8996 129.408 149.01C129.408 213.121 77.4359 265.093 13.3251 265.093C-50.7857 265.093 -102.758 213.121 -102.758 149.01ZM13.3251 31.9275C-51.338 31.9275 -103.758 84.3473 -103.758 149.01C-103.758 213.673 -51.338 266.093 13.3251 266.093C77.9882 266.093 130.408 213.673 130.408 149.01C130.408 84.3473 77.9882 31.9275 13.3251 31.9275ZM13.3251 43.3452C-45.0321 43.3452 -92.34 90.6531 -92.34 149.01C-92.34 207.368 -45.0321 254.675 13.3251 254.675C71.6823 254.675 118.99 207.368 118.99 149.01C118.99 90.6531 71.6823 43.3452 13.3251 43.3452ZM-93.34 149.01C-93.34 90.1008 -45.5844 42.3452 13.3251 42.3452C72.2346 42.3452 119.99 90.1008 119.99 149.01C119.99 207.92 72.2346 255.675 13.3251 255.675C-45.5844 255.675 -93.34 207.92 -93.34 149.01ZM-81.9223 149.01C-81.9223 96.4064 -39.2786 53.7627 13.325 53.7627C65.9286 53.7627 108.572 96.4064 108.572 149.01C108.572 201.614 65.9286 244.257 13.325 244.257C-39.2786 244.257 -81.9223 201.614 -81.9223 149.01ZM13.325 52.7627C-39.8309 52.7627 -82.9223 95.8541 -82.9223 149.01C-82.9223 202.166 -39.8309 245.257 13.325 245.257C66.4809 245.257 109.572 202.166 109.572 149.01C109.572 95.8541 66.4809 52.7627 13.325 52.7627ZM13.3248 64.1807C-33.5253 64.1807 -71.5048 102.16 -71.5048 149.01C-71.5048 195.86 -33.5253 233.84 13.3248 233.84C60.1748 233.84 98.1543 195.86 98.1543 149.01C98.1543 102.16 60.1748 64.1807 13.3248 64.1807ZM-72.5048 149.01C-72.5048 101.608 -34.0776 63.1807 13.3248 63.1807C60.7271 63.1807 99.1543 101.608 99.1543 149.01C99.1543 196.413 60.7271 234.84 13.3248 234.84C-34.0776 234.84 -72.5048 196.413 -72.5048 149.01ZM-61.0864 149.011C-61.0864 107.914 -27.7712 74.5987 13.3253 74.5987C54.4218 74.5987 87.7371 107.914 87.7371 149.011C87.7371 190.107 54.4218 223.422 13.3253 223.422C-27.7712 223.422 -61.0864 190.107 -61.0864 149.011ZM13.3253 73.5987C-28.3234 73.5987 -62.0864 107.362 -62.0864 149.011C-62.0864 190.659 -28.3234 224.422 13.3253 224.422C54.9741 224.422 88.7371 190.659 88.7371 149.011C88.7371 107.362 54.9741 73.5987 13.3253 73.5987ZM13.3251 85.0165C-22.0179 85.0165 -50.6689 113.668 -50.6689 149.01C-50.6689 184.353 -22.0179 213.004 13.3251 213.004C48.668 213.004 77.319 184.353 77.319 149.01C77.319 113.668 48.668 85.0165 13.3251 85.0165ZM-51.6689 149.01C-51.6689 113.115 -22.5701 84.0165 13.3251 84.0165C49.2203 84.0165 78.319 113.115 78.319 149.01C78.319 184.906 49.2203 214.004 13.3251 214.004C-22.5701 214.004 -51.6689 184.906 -51.6689 149.01ZM-40.2514 149.01C-40.2514 119.421 -16.2645 95.4342 13.3248 95.4342C42.9142 95.4342 66.9011 119.421 66.9011 149.01C66.9011 178.6 42.9142 202.587 13.3248 202.587C-16.2645 202.587 -40.2514 178.6 -40.2514 149.01ZM13.3248 94.4342C-16.8168 94.4342 -41.2514 118.869 -41.2514 149.01C-41.2514 179.152 -16.8168 203.587 13.3248 203.587C43.4665 203.587 67.9011 179.152 67.9011 149.01C67.9011 118.869 43.4665 94.4342 13.3248 94.4342ZM13.3248 105.852C-10.5109 105.852 -29.8336 125.175 -29.8336 149.01C-29.8336 172.846 -10.5109 192.169 13.3248 192.169C37.1606 192.169 56.4833 172.846 56.4833 149.01C56.4833 125.175 37.1606 105.852 13.3248 105.852ZM-30.8336 149.01C-30.8336 124.622 -11.0632 104.852 13.3248 104.852C37.7129 104.852 57.4833 124.622 57.4833 149.01C57.4833 173.398 37.7129 193.169 13.3248 193.169C-11.0632 193.169 -30.8336 173.398 -30.8336 149.01ZM-19.4159 149.01C-19.4159 130.928 -4.75745 116.269 13.3247 116.269C31.4069 116.269 46.0654 130.928 46.0654 149.01C46.0654 167.092 31.4069 181.751 13.3247 181.751C-4.75745 181.751 -19.4159 167.092 -19.4159 149.01ZM13.3247 115.269C-5.30974 115.269 -20.4159 130.376 -20.4159 149.01C-20.4159 167.645 -5.30974 182.751 13.3247 182.751C31.9592 182.751 47.0654 167.645 47.0654 149.01C47.0654 130.376 31.9592 115.269 13.3247 115.269Z" fill="url(#paint0_radial_9_57)"/>
             <defs>
@@ -94,14 +119,20 @@
         </div>
         <div class="portfolio-title-container">
             <div class="portfolio-title">
-                <h2><span>portfolio Is Coming Soon</span> <span>portfolio Is Coming Soon</span></h2>
+                <h2><span>portfolio Is Coming Soon</span> <span>portfolio Is Coming Soon</span> <span>portfolio Is Coming Soon</span> <span>portfolio Is Coming Soon</span></h2>
             </div>
         </div>
         <div class="container">
             <section class="section portfolio position-relative">
                 <p class="text-center">
-                    Meanwhile, please check my work on <a href="https://www.behance.net/obannovab18d"><span>Behance</span></a>, additionally,<br> some <a href="https://issuu.com/olgabannova"><span>reports and ebooks</span></a> and my <a href="https://assets.adobe.com/id/urn:aaid:sc:US:93cfa281-e083-4f1b-9a87-7c4188a7bf7f?view=published" class="filled"><span>magazine design</span></a>
+                    Meanwhile, please check my work:
                 </p>
+                <div class="position-links d-flex w-100 justify-content-center flex-wrap">
+                    <a href="https://www.behance.net/obannovab18d">Behance profit</a>
+                    <a href="https://issuu.com/olgabannova">Reports and Ebooks</a>
+                    <a href="https://assets.adobe.com/id/urn:aaid:sc:US:93cfa281-e083-4f1b-9a87-7c4188a7bf7f?view=published">Magazine design</a>
+                    <a href="#">Flower shop website</a>
+                </div>
                 <div class="d-flex justify-content-center w-100">
                     <a class="button" href="#">
                         Let’s make beautiful design!
@@ -111,9 +142,14 @@
         </div>
     </main>
     <footer>
-        <video id="footer-video" autoplay loop muted poster="static/banner.jpg">
-            <source src="static/background.mp4" type="video/mp4">
-        </video>
+        <div class="grid-decor-container d-flex">
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+            <div class="col grid-decor"></div>
+        </div>
         <div class="container contacts">
             <div class="item connect">
                 Connect with me
@@ -165,6 +201,7 @@
         </div>
     </footer>
 </article>
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
