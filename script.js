@@ -1,6 +1,10 @@
+if (window.safari !== undefined) {
+    document.body.classList.add('safari');
+}
+
 new TypeIt("#banner-text1", {
     strings: "SENIOR",
-    speed: 100,
+    speed: 50,
 }).go();
 setTimeout(() => {
     new TypeIt("#banner-text2", {
@@ -12,7 +16,7 @@ setTimeout(() => {
 setTimeout(() => {
     new TypeIt("#banner-text3", {
         strings: "DESIGNER",
-        speed: 70,
+        speed: 90,
     }).go();
 
 }, 1600);
