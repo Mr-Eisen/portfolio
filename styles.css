@@ -34,6 +34,24 @@ article {
   border-right: white 1px dotted;
   margin: 0 15px;
 }
+@media not all and (min-resolution: 0.001dpcm) {
+  .banner-text .small {
+    font: 32px "ivypresto-display", sans-serif;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 1px;
+  }
+  .banner-text .line:first-of-type .small {
+    position: relative;
+    top: 5px;
+  }
+  .banner-text .line:nth-of-type(2) .small {
+    top: 0;
+  }
+  footer .contacts .line {
+    margin-top: 35px;
+  }
+}
 .banner {
   position: relative;
   height: 100vh;
@@ -609,30 +627,6 @@ footer .social a {
   }
   100% {
     transform: translateX(-200%);
-  }
-}
-@media not all and (min-resolution: 0.001dpcm) {
-  .banner-text .small {
-    font: 32px "ivypresto-display", sans-serif;
-    font-style: italic;
-    text-transform: none;
-    letter-spacing: 1px;
-  }
-  .banner-text .line:first-of-type .small {
-    position: relative;
-    top: 5px;
-  }
-  .banner-text .line:nth-of-type(2) .small {
-    top: 0;
-  }
-  footer .line {
-    margin-top: 35px;
-  }
-}
-@media not all and (min-resolution: 0.001dpcm) and (max-width: 768px) {
-  .banner-text .small {
-    font-size: 24px;
-    margin-bottom: 15px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
