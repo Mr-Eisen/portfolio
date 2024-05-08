@@ -573,7 +573,7 @@ footer .social a {
   left: 0;
   height: 180px;
   position: absolute;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 @media (max-width: 991px) {
   .portfolio-title-container .portfolio-title {
