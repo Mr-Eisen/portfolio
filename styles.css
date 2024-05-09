@@ -129,6 +129,7 @@ article {
 @media (max-width: 768px) {
   .banner-text {
     font-size: 56px;
+    padding-left: 30px;
   }
 }
 @media (min-width: 992px) {
@@ -151,6 +152,11 @@ article {
   height: 55px;
   background: url("static/corner_top.svg") 0 0 no-repeat;
 }
+@media (max-width: 768px) {
+  .banner-text:before {
+    display: none;
+  }
+}
 .banner-text:after {
   content: "";
   position: absolute;
@@ -160,6 +166,11 @@ article {
   width: 55px;
   height: 55px;
   background: url("static/corner_bottom.svg") 0 0 no-repeat;
+}
+@media (max-width: 768px) {
+  .banner-text:after {
+    display: none;
+  }
 }
 .banner-text .invisible {
   width: 1px;
@@ -297,6 +308,11 @@ main #banner-circle-bottom {
   top: -148px;
   left: 0;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  main #banner-circle-bottom {
+    opacity: 0.4;
+  }
 }
 .section {
   margin: 0 auto 40px;
@@ -596,7 +612,7 @@ footer .social a {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: inline-block;
-  animation: scrolling-left2 60s linear infinite;
+  animation: scrolling-left2 90s linear infinite;
   animation-delay: 1s;
 }
 .portfolio-title-container .portfolio-title h2 span + span {

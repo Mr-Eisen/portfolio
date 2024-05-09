@@ -22,7 +22,7 @@ setTimeout(() => {
 }, 1600);
 setTimeout(() => {
     new TypeIt("#banner-text4", {
-        strings: "Olga bannova",
+        strings: "Olga Bannova",
         speed: 55,
     }).go();
 

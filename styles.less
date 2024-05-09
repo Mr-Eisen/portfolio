@@ -127,6 +127,7 @@ article {
   text-transform: uppercase;
   @media (max-width: 768px) {
     font-size: 56px;
+    padding-left: 30px;
   }
   @media (min-width: 992px) {
     min-width: 900px;
@@ -143,6 +144,9 @@ article {
     width: 55px;
     height: 55px;
     background: url("static/corner_top.svg") 0 0 no-repeat;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   &:after {
     content: "";
@@ -153,6 +157,9 @@ article {
     width: 55px;
     height: 55px;
     background: url("static/corner_bottom.svg") 0 0 no-repeat;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   .invisible {
     width: 1px;
@@ -285,6 +292,9 @@ main {
     top: -148px;
     left: 0;
     z-index: 1;
+    @media (max-width: 768px) {
+      opacity: 0.4;
+    }
   }
 }
 
@@ -574,7 +584,7 @@ footer {
         -webkit-text-fill-color: transparent;
         background-clip: text;
         display:inline-block;
-        animation: scrolling-left2 60s linear infinite;
+        animation: scrolling-left2 90s linear infinite;
         animation-delay: 1s;
         & + span {
           background: linear-gradient(90deg, rgba(60, 2, 182, 1) 30%, rgba(193, 99, 238, 1) 50%, rgba(220, 68, 244, 1) 80%);
