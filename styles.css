@@ -83,6 +83,7 @@ article {
   top: calc(50% - 50px);
   left: calc(50% - 142px);
   animation: animateCircle 1s;
+  opacity: 0.6;
 }
 .banner .bottom-mobile {
   position: absolute;
@@ -290,7 +291,7 @@ article {
     transform: scale(0);
   }
   100% {
-    transform: scale(1);
+    transform: scale(0.8);
   }
 }
 main {
