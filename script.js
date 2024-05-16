@@ -29,7 +29,7 @@ setTimeout(() => {
 }, 2400);
 setTimeout(() => {
     new TypeIt("#banner-text5", {
-        strings: "10+ years of experience",
+        strings: "15+ years of experience",
         speed: 50,
     }).go();
 
