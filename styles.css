@@ -11,12 +11,15 @@ article {
 }
 .grid-decor-container {
   position: absolute;
-  top: 0;
-  left: 40px;
+  padding: 0 !important;
   height: 100%;
-  width: calc(100% - 80px);
-  opacity: 0.1;
+  opacity: 0.15;
   z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (max-width: 991px) {
   .grid-decor-container {
@@ -30,9 +33,15 @@ article {
   border-color: black;
 }
 .grid-decor-container .grid-decor {
-  border-left: white 1px dotted;
-  border-right: white 1px dotted;
+  border-left: white 1px dashed;
+  border-right: white 1px dashed;
   margin: 0 15px;
+}
+.grid-decor-container .grid-decor:first-child {
+  margin-left: 0;
+}
+.grid-decor-container .grid-decor:last-child {
+  margin-right: 0;
 }
 .safari .banner-text .line:first-of-type .small {
   position: relative;
@@ -72,6 +81,7 @@ article {
   position: relative;
   z-index: 2;
   display: none;
+  font-family: "Public Sans", sans-serif;
 }
 @media (min-width: 768px) {
   .banner .banner-top a {
@@ -140,7 +150,7 @@ article {
 }
 @media (min-width: 1367px) {
   .banner-text {
-    min-width: 966px;
+    min-width: 950px;
   }
 }
 .banner-text:before {
@@ -447,15 +457,16 @@ footer .contacts {
   position: relative;
   z-index: 9;
   display: grid;
-  grid-template-columns: fit-content(480px) 170px 1fr 1fr 1fr;
+  grid-template-columns: fit-content(480px) 180px 1fr 1fr 1fr;
   grid-template-rows: auto;
-  column-gap: 30px;
+  column-gap: 36px;
   row-gap: 105px;
   align-items: center;
   grid-template-areas: "connect line email phone ." ". . designer designer social";
 }
 @media (max-width: 1440px) {
   footer .contacts {
+    column-gap: 30px;
     grid-template-areas: "connect line email phone phone" ". . designer designer social";
   }
 }
@@ -519,7 +530,7 @@ footer .line {
 }
 footer .info {
   margin-top: -5px;
-  font: 300 18px "quasimoda", sans-serif;
+  font: 300 18px "Public Sans", sans-serif;
   line-height: 1.5;
 }
 footer .designer {
@@ -544,10 +555,17 @@ footer .designer {
 }
 footer .social {
   display: flex;
+  justify-self: end;
 }
 footer .social a {
   display: block;
   margin: 0 9px;
+}
+footer .social a:first-child {
+  margin-left: 0;
+}
+footer .social a:last-child {
+  margin-right: 0;
 }
 @media (max-width: 1399px) {
   footer .connect {
