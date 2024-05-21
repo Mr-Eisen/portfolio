@@ -247,7 +247,7 @@ article {
 .wave_blue:after {
   content: "";
   position: absolute;
-  top: -103px;
+  top: -99px;
   left: -110px;
   z-index: 0;
   width: 244px;
@@ -389,7 +389,7 @@ main #banner-circle-bottom {
 .section.portfolio a {
   display: block;
   color: #7B54CE;
-  font: 300 24px/47px "Public Sans", sans-serif;
+  font: 300 23px/47px "Public Sans", sans-serif;
   text-decoration: none;
   font-weight: 600;
   border: 1px solid #DC44F4;
