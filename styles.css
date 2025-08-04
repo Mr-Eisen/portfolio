@@ -11,7 +11,6 @@ article {
 }
 .grid-decor-container {
   position: absolute;
-  padding: 0 !important;
   height: 100%;
   opacity: 0.15;
   z-index: 2;
@@ -35,7 +34,7 @@ article {
 .grid-decor-container .grid-decor {
   border-left: white 1px dashed;
   border-right: white 1px dashed;
-  margin: 0 15px;
+  margin: 0 12px;
 }
 .grid-decor-container .grid-decor:first-child {
   margin-left: 0;
@@ -65,7 +64,8 @@ article {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 45px 0;
+  padding-top: 45px;
+  padding-bottom: 45px;
   z-index: 9;
   color: #fff;
   font: 400 16px "quasimoda", sans-serif;
@@ -655,5 +655,150 @@ footer .social a:last-child {
   100% {
     transform: translateX(-200%);
   }
+}
+.design-experience-text-container {
+  z-index: 1;
+}
+.design-experience-text h2 {
+  font: 500 49px/49px "ivypresto-display", sans-serif;
+}
+.design-experience-text h3 {
+  font: 300 25px/37px "ivypresto-display", sans-serif;
+  margin-bottom: 25px;
+}
+.design-experience-text p {
+  font: 400 16px/24px "freight-sans-pro", sans-serif;
+  margin-bottom: 25px;
+}
+.design-experience-text a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 400 14px/30px "quasimoda", sans-serif;
+  width: 216px;
+  height: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+  background: linear-gradient(269.32deg, #3C02B6 1.09%, #C163EE 51.81%, #DC44F4 100.09%);
+}
+.design-experience-text a:hover {
+  background: linear-gradient(269.32deg, #DC44F4 1.09%, #C163EE 51.81%, #3C02B6 100.09%);
+}
+.design-experience-container {
+  position: relative;
+  z-index: 1;
+}
+.design-experience {
+  margin-bottom: 120px;
+}
+@media (max-width: 1399px) {
+  .design-experience {
+    display: none;
+  }
+}
+.design-experience.anna {
+  padding-bottom: 115px;
+}
+.design-experience.anna .design-experience-text {
+  width: 304px;
+}
+.design-experience.anna .design-experience__img-mob {
+  max-width: 111%;
+  left: -18px;
+  position: relative;
+}
+.design-experience.anna .design-experience__img-bg {
+  position: relative;
+  max-width: calc(100% + 5px);
+  left: -5px;
+}
+.design-experience.anna .design-experience__img-screen {
+  position: absolute;
+  bottom: -113px;
+  right: 76px;
+  max-width: 630px;
+}
+.design-experience.anna .design-experience__img-icon {
+  position: absolute;
+  top: -50px;
+  left: -42px;
+}
+.design-experience.anna .design-experience__img-gradient {
+  position: absolute;
+  top: -204px;
+  left: -215px;
+  max-width: 720px;
+}
+.design-experience.anna .design-experience__img-dots {
+  position: absolute;
+  bottom: -84px;
+  left: 50px;
+}
+.design-experience.bloom {
+  padding-top: 54px;
+}
+.design-experience.bloom .design-experience-text {
+  width: 240px;
+}
+.design-experience.bloom .design-experience__img-mob {
+  max-width: 103%;
+  right: -25px;
+  top: -20px;
+  position: relative;
+}
+.design-experience.bloom .design-experience__img-bg {
+  position: relative;
+  max-width: 800px;
+  left: -5px;
+}
+.design-experience.bloom .design-experience__img-screen {
+  position: absolute;
+  bottom: -53px;
+  right: 20px;
+  max-width: 574px;
+}
+.design-experience.bloom .design-experience__img-icon {
+  position: absolute;
+  top: -54px;
+  right: 98px;
+}
+.design-experience.bloom .design-experience__img-dots {
+  width: 255px;
+  display: block;
+  margin-bottom: 5px;
+}
+.design-experience.flowerful {
+  padding-top: 54px;
+}
+.design-experience.flowerful .design-experience-text p {
+  width: 320px;
+}
+.design-experience.flowerful .design-experience__img-mob {
+  position: absolute;
+  bottom: -114px;
+  width: 170px;
+  right: 540px;
+}
+.design-experience.flowerful .design-experience__img-bg {
+  position: relative;
+  max-width: 820px;
+}
+.design-experience.flowerful .design-experience__img-screen {
+  position: absolute;
+  bottom: -115px;
+  right: -20px;
+  max-width: 574px;
+}
+.design-experience.flowerful .design-experience__img-icon {
+  position: absolute;
+  top: -54px;
+  right: 77px;
+}
+.design-experience.flowerful .design-experience__img-dots {
+  width: 255px;
+  display: block;
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=styles.css.map */
