@@ -691,6 +691,7 @@ footer .social a:last-child {
   z-index: 1;
 }
 .design-experience {
+  display: none;
   margin-bottom: 120px;
 }
 @media (max-width: 1399px) {
