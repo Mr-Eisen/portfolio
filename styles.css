@@ -1,6 +1,6 @@
-@media (min-width: 1440px) {
+@media (min-width: 1320px) {
   .container {
-    max-width: 1440px;
+    max-width: 1320px;
   }
 }
 .ti-cursor {
@@ -150,7 +150,7 @@ article {
 }
 @media (min-width: 1367px) {
   .banner-text {
-    min-width: 950px;
+    min-width: 905px;
   }
 }
 .banner-text:before {
@@ -519,7 +519,7 @@ footer a {
   font-weight: 600;
 }
 footer .connect {
-  font: 600 48px "quasimoda", sans-serif;
+  font: 600 42px "quasimoda", sans-serif;
   position: relative;
   text-transform: uppercase;
 }
@@ -660,22 +660,22 @@ footer .social a:last-child {
   z-index: 1;
 }
 .design-experience-text h2 {
-  font: 500 49px/49px "ivypresto-display", sans-serif;
+  font: 600 49px/49px "ivypresto-display", sans-serif;
 }
 .design-experience-text h3 {
-  font: 300 25px/37px "ivypresto-display", sans-serif;
-  margin-bottom: 25px;
+  font: 300 25px/33px "ivypresto-display", sans-serif;
+  margin-bottom: 15px;
 }
 .design-experience-text p {
   font: 400 16px/24px "freight-sans-pro", sans-serif;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .design-experience-text a {
   display: flex;
   align-items: center;
   justify-content: center;
   font: 400 14px/30px "quasimoda", sans-serif;
-  width: 216px;
+  width: 209px;
   height: 50px;
   color: #fff;
   text-transform: uppercase;
@@ -691,13 +691,30 @@ footer .social a:last-child {
   z-index: 1;
 }
 .design-experience {
-  display: none;
   margin-bottom: 120px;
 }
 @media (max-width: 1399px) {
   .design-experience {
     display: none;
   }
+}
+.design-experience__img-mob {
+  transition: all 0.5s ease-in-out 0.3s;
+  transform: translateY(50px);
+  opacity: 0.2;
+}
+.design-experience__img-bg {
+  transition: all 0.5s ease-in-out 0.1s;
+  transform: translateX(100px);
+  opacity: 0.2;
+}
+.design-experience.is-inViewport .design-experience__img-mob {
+  opacity: 1;
+  transform: translateY(0);
+}
+.design-experience.is-inViewport .design-experience__img-bg {
+  opacity: 1;
+  transform: translateX(0);
 }
 .design-experience.anna {
   padding-bottom: 115px;
@@ -751,7 +768,7 @@ footer .social a:last-child {
 }
 .design-experience.bloom .design-experience__img-bg {
   position: relative;
-  max-width: 800px;
+  max-width: 730px;
   left: -5px;
 }
 .design-experience.bloom .design-experience__img-screen {
@@ -763,7 +780,7 @@ footer .social a:last-child {
 .design-experience.bloom .design-experience__img-icon {
   position: absolute;
   top: -54px;
-  right: 98px;
+  left: 662px;
 }
 .design-experience.bloom .design-experience__img-dots {
   width: 255px;
@@ -772,34 +789,450 @@ footer .social a:last-child {
 }
 .design-experience.flowerful {
   padding-top: 54px;
+  padding-bottom: 114px;
 }
 .design-experience.flowerful .design-experience-text p {
-  width: 320px;
+  width: 370px;
 }
 .design-experience.flowerful .design-experience__img-mob {
   position: absolute;
-  bottom: -114px;
+  bottom: -70px;
   width: 170px;
-  right: 540px;
+  right: 500px;
 }
 .design-experience.flowerful .design-experience__img-bg {
   position: relative;
-  max-width: 820px;
+  max-width: 766px;
 }
 .design-experience.flowerful .design-experience__img-screen {
   position: absolute;
-  bottom: -115px;
-  right: -20px;
-  max-width: 574px;
+  bottom: -70px;
+  right: -15px;
+  max-width: 535px;
 }
 .design-experience.flowerful .design-experience__img-icon {
   position: absolute;
-  top: -54px;
-  right: 77px;
+  top: -44px;
+  right: 60px;
 }
 .design-experience.flowerful .design-experience__img-dots {
   width: 255px;
   display: block;
   margin-bottom: 5px;
+}
+.design-experience.spa {
+  padding-bottom: 114px;
+}
+.design-experience.spa .design-experience-text {
+  position: relative;
+  left: -130px;
+  width: 370px;
+}
+.design-experience.spa .design-experience-text p {
+  width: 320px;
+}
+.design-experience.spa .design-experience__img-mob {
+  position: absolute;
+  left: 580px;
+  bottom: -114px;
+  width: 170px;
+}
+.design-experience.spa .design-experience__img-bg {
+  position: relative;
+  max-width: 100%;
+}
+.design-experience.spa .design-experience__img-screen {
+  position: absolute;
+  bottom: -115px;
+  left: 20px;
+  max-width: 574px;
+}
+.design-experience.spa .design-experience__img-icon {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+.design-experience.spa .design-experience__img-dots {
+  width: 255px;
+  display: block;
+  margin-bottom: 5px;
+}
+.design-experience.spa .design-experience__img-spa {
+  position: absolute;
+  left: -15px;
+  top: -35px;
+  z-index: -1;
+}
+.design-experience.epartner {
+  padding-bottom: 114px;
+  margin-bottom: 170px;
+}
+.design-experience.epartner .design-experience-text {
+  position: relative;
+  width: 370px;
+}
+.design-experience.epartner .design-experience-text p {
+  width: 350px;
+}
+.design-experience.epartner .design-experience__img-bg {
+  position: relative;
+  max-width: 97%;
+}
+.design-experience.epartner .design-experience__img-mob {
+  position: absolute;
+  right: -16px;
+  bottom: -43px;
+  max-width: 535px;
+}
+.design-experience.epartner .design-experience__img-screen {
+  position: absolute;
+  bottom: -43px;
+  right: 500px;
+  max-width: 535px;
+}
+.design-experience.epartner .design-experience__img-icon {
+  position: absolute;
+  top: 40px;
+  right: 544px;
+}
+.design-experience.epartner .design-experience__img-dots {
+  width: 255px;
+  display: block;
+  margin-bottom: 5px;
+}
+.design-experience.epartner .design-experience__img-spa {
+  position: absolute;
+  left: -15px;
+  top: -35px;
+  z-index: -1;
+}
+.design-experience.golf {
+  padding-bottom: 114px;
+  margin-bottom: 180px;
+}
+.design-experience.golf .design-experience-text {
+  position: relative;
+  width: 370px;
+  left: 35px;
+}
+.design-experience.golf .design-experience-text p {
+  width: 320px;
+}
+.design-experience.golf .design-experience__img-bg {
+  position: relative;
+  left: -10px;
+  max-width: 675px;
+}
+.design-experience.golf .design-experience__img-mob {
+  position: absolute;
+  right: 275px;
+  bottom: -54px;
+  max-width: 170px;
+}
+.design-experience.golf .design-experience__img-screen {
+  position: absolute;
+  bottom: -55px;
+  right: 448px;
+  max-width: 574px;
+}
+.design-experience.golf .design-experience__img-icon {
+  position: absolute;
+  top: -42px;
+  right: 204px;
+}
+.design-experience.golf .design-experience__img-dots {
+  width: 255px;
+  display: block;
+  margin-bottom: 5px;
+}
+.design-experience.golf .design-experience__img-icon-golf {
+  position: absolute;
+  top: -17px;
+  right: 218px;
+  max-width: 90px;
+}
+.design-experience.golf .design-experience__img-golf {
+  position: absolute;
+  top: 140px;
+  right: -40px;
+  max-width: 330px;
+}
+.design-experience.blue {
+  padding-bottom: 115px;
+}
+.design-experience.blue .design-experience-text {
+  width: 304px;
+}
+.design-experience.blue .design-experience__img-mob {
+  max-width: 111%;
+  left: -18px;
+  position: relative;
+}
+.design-experience.blue .design-experience__img-bg {
+  position: relative;
+  max-width: 913px;
+  left: -108px;
+}
+.design-experience.blue .design-experience__img-screen {
+  position: absolute;
+  bottom: -113px;
+  right: -17px;
+  max-width: 645px;
+}
+.design-experience.blue .design-experience__img-icon {
+  position: absolute;
+  top: -70px;
+  right: 13px;
+}
+.design-experience.blue .design-experience__img-gradient {
+  position: absolute;
+  top: -204px;
+  left: -215px;
+  max-width: 720px;
+}
+.design-experience.blue .design-experience__img-dots {
+  position: absolute;
+  bottom: -84px;
+  left: 50px;
+}
+.design-experience.homework .design-experience-text {
+  width: 320px;
+}
+.design-experience.homework .design-experience__img-mob {
+  position: absolute;
+  top: 85px;
+  width: 170px;
+  right: 100px;
+}
+.design-experience.homework .design-experience__img-bg {
+  position: relative;
+  max-width: 743px;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+.design-experience.homework .design-experience__img-screen {
+  position: absolute;
+  top: 55px;
+  right: 300px;
+  max-width: 670px;
+}
+.design-experience.homework .design-experience__img-icon {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  width: 125px;
+}
+.design-experience.homework .design-experience__circle {
+  position: absolute;
+  top: -55px;
+  left: 185px;
+}
+.design-experience.homework .design-experience__triangle {
+  position: absolute;
+  top: -100px;
+  left: 285px;
+}
+.design-experience.homework .design-experience__square {
+  position: absolute;
+  bottom: 0;
+  left: 290px;
+}
+.design-experience.vtail {
+  padding-bottom: 45px;
+}
+.design-experience.vtail .design-experience-text {
+  width: 304px;
+  position: absolute;
+  top: 125px;
+  left: 300px;
+  z-index: 2;
+  color: #fff !important;
+}
+.design-experience.vtail .design-experience__img-mob {
+  max-width: 220px;
+  left: -4px;
+  top: 40px;
+  position: absolute;
+  z-index: 1;
+}
+.design-experience.vtail .design-experience__img-bg {
+  position: relative;
+  max-width: 980px;
+  left: 95px;
+}
+.design-experience.vtail .design-experience__img-screen {
+  position: absolute;
+  bottom: -75px;
+  right: -17px;
+  max-width: 645px;
+}
+.design-experience.vtail .design-experience__img-icon {
+  position: absolute;
+  top: -50px;
+  left: 1012px;
+}
+.design-experience.vtail .design-experience__img-dots {
+  position: absolute;
+  bottom: 35px;
+  left: 75px;
+}
+.design-experience.vtail .design-experience__img-dots-2 {
+  position: absolute;
+  bottom: 35px;
+  left: -95px;
+  z-index: -1;
+}
+.design-experience.baits {
+  padding-bottom: 115px;
+  padding-top: 54px;
+}
+.design-experience.baits .design-experience-text {
+  width: 280px;
+  margin-left: 45px;
+  position: relative;
+  bottom: -30px;
+}
+.design-experience.baits .design-experience__img-mob {
+  max-width: 260px;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  position: relative;
+  top: -40px;
+  right: -25px;
+}
+.design-experience.baits .design-experience__img-bg {
+  position: relative;
+  max-width: 787px;
+  left: -5px;
+}
+.design-experience.baits .design-experience__img-screen {
+  position: absolute;
+  bottom: -91px;
+  right: -15px;
+  max-width: 452px;
+}
+.design-experience.baits .design-experience__img-icon {
+  position: absolute;
+  top: 90px;
+  right: -102px;
+}
+.design-experience.baits .design-experience__img-dots {
+  width: 247px;
+  display: block;
+  top: 50px;
+  right: 71px;
+  position: absolute;
+}
+.design-experience.writezilla {
+  padding-bottom: 115px;
+}
+.design-experience.writezilla .design-experience-text-container {
+  padding-top: 96px;
+}
+.design-experience.writezilla .design-experience-text {
+  width: 260px;
+}
+.design-experience.writezilla .design-experience__img-mob {
+  max-width: 111%;
+  left: -18px;
+  position: relative;
+}
+.design-experience.writezilla .design-experience__img-bg {
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  max-width: 793px;
+  display: block;
+}
+.design-experience.writezilla .design-experience__img-screen {
+  position: absolute;
+  bottom: -105px;
+  right: 76px;
+  max-width: 630px;
+}
+.design-experience.writezilla .design-experience__img-icon {
+  position: absolute;
+  top: 30px;
+  right: 42px;
+}
+.design-experience.writezilla .design-experience__img-decor {
+  position: absolute;
+  top: -70px;
+  right: -75px;
+  max-width: 173px;
+}
+.design-experience.writezilla .design-experience__img-decor-2 {
+  position: absolute;
+  top: -15px;
+  right: -20px;
+  max-width: 64px;
+}
+.design-experience.writezilla .design-experience__img-dots {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+.design-experience.ebooks {
+  padding-bottom: 115px;
+}
+.design-experience.ebooks .design-experience-text {
+  width: 280px;
+}
+.design-experience.ebooks .design-experience__img-mob {
+  max-width: 111%;
+  left: -18px;
+  position: relative;
+}
+.design-experience.ebooks .design-experience__img-bg {
+  position: relative;
+  margin-left: 105px;
+  max-width: 768px;
+  display: block;
+}
+.design-experience.ebooks .design-experience__img-screen {
+  position: absolute;
+  bottom: -92px;
+  right: -15px;
+  max-width: 630px;
+}
+.design-experience.ebooks .design-experience__img-icon {
+  position: absolute;
+  top: -51px;
+  left: 60px;
+  width: 133px;
+}
+.design-experience.magazine {
+  padding-bottom: 115px;
+}
+.design-experience.magazine .design-experience-text {
+  width: 300px;
+  position: relative;
+  left: -110px;
+}
+.design-experience.magazine .design-experience__img-mob {
+  max-width: 325px;
+  position: absolute;
+  top: 240px;
+  left: -5px;
+}
+.design-experience.magazine .design-experience__img-bg {
+  position: relative;
+  margin-left: 105px;
+  max-width: 847px;
+  display: block;
+}
+.design-experience.magazine .design-experience__img-screen {
+  position: absolute;
+  top: 241px;
+  left: 310px;
+  max-height: 404px;
+}
+.design-experience.magazine .design-experience__img-icon {
+  position: absolute;
+  top: -51px;
+  left: 898px;
+  width: 133px;
 }
 /*# sourceMappingURL=styles.css.map */
