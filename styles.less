@@ -342,7 +342,7 @@ main {
     }
     a {
       display: inline-block;
-      margin: 0 0 0 auto;
+      //margin: 0 0 0 auto;
       text-transform: uppercase;
       text-decoration: none;
       font: 600 14px "quasimoda", sans-serif;
@@ -356,11 +356,30 @@ main {
         border-bottom: 1px solid #000;
       }
     }
+    .contact-btn {
+      height: 50px;
+      width: 244px;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .contact-btn-border {
+        position: absolute;
+        &:first-child {
+          left: 0; top: 0;
+        }
+        & + .contact-btn-border {
+          transform: rotate(180deg);
+          right: 0; bottom: 0;
+        }
+      }
+    }
   }
   &.portfolio {
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 50px;
     max-width: 100%;
     p {
       font: 300 24px "Public Sans", sans-serif;
@@ -370,20 +389,20 @@ main {
     }
     a {
       display: block;
-      color: #7B54CE;
-      font: 300 23px/47px "Public Sans", sans-serif;
+      text-transform: uppercase;
+      color: rgba(44, 6, 126, 1);
+      font: 400 16px/47px "freight-sans-pro", sans-serif;;
       text-decoration: none;
-      font-weight: 600;
-      border: 1px solid #DC44F4;
+      border: 1px solid rgba(44, 6, 126, 1);
       border-radius: 40px;
       padding: 0 15px 2px;
       position: relative;
-      margin: 0 15px 35px;
+      margin: 0 0 35px;
       transition: 0.3s all;
       &.filled, &:hover {
         color: #fff;
         border-color: transparent;
-        background: linear-gradient(90deg, rgba(220, 68, 244, 1) 30%, rgba(193, 99, 238, 1) 50%, rgba(60, 2, 182, 1) 80%);
+        background: rgba(44, 6, 126, 1);
       }
       span {
         position: relative;
@@ -573,6 +592,22 @@ footer {
   }
 }
 
+.portfolio-title-static {
+  margin: 240px 0 93px;
+  text-align: center;
+  position: relative;
+  h2 {
+    text-transform: uppercase;
+    font: 700 110px/90px "quasimoda", sans-serif;
+    color: rgba(44, 6, 126, 1);
+    margin: 0;
+  }
+  p {
+    font: 600 16px/24px "Public Sans", sans-serif;
+    color: rgba(44, 6, 126, 1);
+  }
+}
+
 .portfolio-title-container {
   position: relative;
   height: 190px;
@@ -675,7 +710,7 @@ footer {
   @media (max-width: 1399px) {
     display: none;
   }
-  margin-bottom: 120px;
+  margin-bottom: 220px;
 
   &__img-mob {
     transition: all 0.5s ease-in-out 0.3s;
@@ -873,7 +908,7 @@ footer {
 
   &.epartner {
     padding-bottom: 114px;
-    margin-bottom: 170px;
+    margin-bottom: 300px;
     .design-experience-text {
       position: relative;
       width: 370px;
@@ -919,7 +954,7 @@ footer {
 
   &.golf {
     padding-bottom: 114px;
-    margin-bottom: 180px;
+    margin-bottom: 300px;
     .design-experience-text {
       position: relative;
       width: 370px;
@@ -1289,5 +1324,17 @@ footer {
         width: 133px;
       }
     }
+  }
+}
+
+.design-experience__img-icon {
+  animation: rotate-infinite 20s linear infinite;
+}
+@keyframes rotate-infinite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

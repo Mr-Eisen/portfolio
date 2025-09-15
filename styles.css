@@ -360,7 +360,6 @@ main #banner-circle-bottom {
 }
 .section.description a {
   display: inline-block;
-  margin: 0 0 0 auto;
   text-transform: uppercase;
   text-decoration: none;
   font: 600 14px "quasimoda", sans-serif;
@@ -374,10 +373,31 @@ main #banner-circle-bottom {
   display: inline-block;
   border-bottom: 1px solid #000;
 }
+.section.description .contact-btn {
+  height: 50px;
+  width: 244px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.section.description .contact-btn .contact-btn-border {
+  position: absolute;
+}
+.section.description .contact-btn .contact-btn-border:first-child {
+  left: 0;
+  top: 0;
+}
+.section.description .contact-btn .contact-btn-border + .contact-btn-border {
+  transform: rotate(180deg);
+  right: 0;
+  bottom: 0;
+}
 .section.portfolio {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 50px;
   max-width: 100%;
 }
 .section.portfolio p {
@@ -388,22 +408,22 @@ main #banner-circle-bottom {
 }
 .section.portfolio a {
   display: block;
-  color: #7B54CE;
-  font: 300 23px/47px "Public Sans", sans-serif;
+  text-transform: uppercase;
+  color: #2c067e;
+  font: 400 16px/47px "freight-sans-pro", sans-serif;
   text-decoration: none;
-  font-weight: 600;
-  border: 1px solid #DC44F4;
+  border: 1px solid #2c067e;
   border-radius: 40px;
   padding: 0 15px 2px;
   position: relative;
-  margin: 0 15px 35px;
+  margin: 0 0 35px;
   transition: 0.3s all;
 }
 .section.portfolio a.filled,
 .section.portfolio a:hover {
   color: #fff;
   border-color: transparent;
-  background: linear-gradient(90deg, #dc44f4 30%, #c163ee 50%, #3c02b6 80%);
+  background: #2c067e;
 }
 .section.portfolio a span {
   position: relative;
@@ -591,6 +611,21 @@ footer .social a:last-child {
     display: none;
   }
 }
+.portfolio-title-static {
+  margin: 240px 0 93px;
+  text-align: center;
+  position: relative;
+}
+.portfolio-title-static h2 {
+  text-transform: uppercase;
+  font: 700 110px/90px "quasimoda", sans-serif;
+  color: #2c067e;
+  margin: 0;
+}
+.portfolio-title-static p {
+  font: 600 16px/24px "Public Sans", sans-serif;
+  color: #2c067e;
+}
 .portfolio-title-container {
   position: relative;
   height: 190px;
@@ -691,7 +726,7 @@ footer .social a:last-child {
   z-index: 1;
 }
 .design-experience {
-  margin-bottom: 120px;
+  margin-bottom: 220px;
 }
 @media (max-width: 1399px) {
   .design-experience {
@@ -865,7 +900,7 @@ footer .social a:last-child {
 }
 .design-experience.epartner {
   padding-bottom: 114px;
-  margin-bottom: 170px;
+  margin-bottom: 300px;
 }
 .design-experience.epartner .design-experience-text {
   position: relative;
@@ -908,7 +943,7 @@ footer .social a:last-child {
 }
 .design-experience.golf {
   padding-bottom: 114px;
-  margin-bottom: 180px;
+  margin-bottom: 300px;
 }
 .design-experience.golf .design-experience-text {
   position: relative;
@@ -1234,5 +1269,16 @@ footer .social a:last-child {
   top: -51px;
   left: 898px;
   width: 133px;
+}
+.design-experience__img-icon {
+  animation: rotate-infinite 20s linear infinite;
+}
+@keyframes rotate-infinite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
