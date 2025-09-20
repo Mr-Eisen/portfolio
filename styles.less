@@ -596,10 +596,19 @@ footer {
   margin: 240px 0 93px;
   text-align: center;
   position: relative;
+  &:before {
+    z-index: -1;
+    content: url("static/gradient_title.png");
+    position: absolute;
+    width: 1080px;
+    height: 996px;
+    top: calc(50% - 498px);
+    left: calc(50% - 540px);
+  }
   h2 {
     text-transform: uppercase;
     font: 700 110px/90px "quasimoda", sans-serif;
-    color: rgba(44, 6, 126, 1);
+    color: #fff;
     margin: 0;
   }
   p {
@@ -713,12 +722,12 @@ footer {
   margin-bottom: 220px;
 
   &__img-mob {
-    transition: all 0.5s ease-in-out 0.3s;
+    transition: all 1s ease-in-out 0.4s;
     transform: translateY(50px);
     opacity: 0.2;
   }
   &__img-bg  {
-    transition: all 0.5s ease-in-out 0.1s;
+    transition: all 1s ease-in-out 0.3s;
     transform: translateX(100px);
     opacity: 0.2;
   }

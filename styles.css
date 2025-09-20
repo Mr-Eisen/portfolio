@@ -616,10 +616,19 @@ footer .social a:last-child {
   text-align: center;
   position: relative;
 }
+.portfolio-title-static:before {
+  z-index: -1;
+  content: url("static/gradient_title.png");
+  position: absolute;
+  width: 1080px;
+  height: 996px;
+  top: calc(50% - 498px);
+  left: calc(50% - 540px);
+}
 .portfolio-title-static h2 {
   text-transform: uppercase;
   font: 700 110px/90px "quasimoda", sans-serif;
-  color: #2c067e;
+  color: #fff;
   margin: 0;
 }
 .portfolio-title-static p {
@@ -734,12 +743,12 @@ footer .social a:last-child {
   }
 }
 .design-experience__img-mob {
-  transition: all 0.5s ease-in-out 0.3s;
+  transition: all 1s ease-in-out 0.4s;
   transform: translateY(50px);
   opacity: 0.2;
 }
 .design-experience__img-bg {
-  transition: all 0.5s ease-in-out 0.1s;
+  transition: all 1s ease-in-out 0.3s;
   transform: translateX(100px);
   opacity: 0.2;
 }
