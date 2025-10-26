@@ -645,12 +645,12 @@ footer .social a:last-child {
 }
 .portfolio-title-static:before {
   z-index: -1;
-  content: url("static/gradient_title.png");
+  content: url("static/banner_gradient.jpg");
   position: absolute;
-  width: 1080px;
-  height: 996px;
-  top: calc(50% - 498px);
-  left: calc(50% - 540px);
+  width: 1280px;
+  height: 1183px;
+  top: calc(50% - 640px);
+  left: calc(50% - 591px);
 }
 .portfolio-title-static h2 {
   text-transform: uppercase;
@@ -768,18 +768,18 @@ footer .social a:last-child {
   background: linear-gradient(269.32deg, #DC44F4 1.09%, #C163EE 51.81%, #3C02B6 100.09%);
 }
 .design-experience-container {
-  margin-top: 200px;
+  margin-top: 240px;
   position: relative;
   z-index: 1;
 }
 @media (max-width: 992px) {
   .design-experience-container {
-    margin-top: 200px;
+    margin-top: 240px;
   }
 }
 @media (max-width: 767px) {
   .design-experience-container {
-    margin-top: 100px;
+    margin-top: 140px;
   }
 }
 .design-experience {
@@ -906,6 +906,12 @@ footer .social a:last-child {
   width: 255px;
   display: block;
   margin-bottom: 5px;
+}
+.design-experience.flowerful .design-experience__img-rose {
+  width: 416px;
+  position: absolute;
+  left: -55px;
+  top: -100px;
 }
 @media (max-width: 1399px) {
   .design-experience.flowerful .design-experience-text {
