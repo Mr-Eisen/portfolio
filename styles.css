@@ -3,6 +3,13 @@
     max-width: 1320px;
   }
 }
+@media (max-width: 1399px) {
+  .container {
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 .ti-cursor {
   display: none !important;
 }
@@ -336,6 +343,13 @@ main #banner-circle-bottom {
     margin: 0 auto 40px;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .section.description {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .section.description .grid-bg1,
 .section.description .grid-bg2 {
   position: absolute;
@@ -357,6 +371,19 @@ main #banner-circle-bottom {
 }
 .section.description strong {
   font-weight: 600;
+}
+@media (max-width: 767px) {
+  .section.description .description-links {
+    flex-direction: column;
+  }
+  .section.description .description-links a {
+    text-align: center;
+    width: 244px;
+    margin: 0 auto;
+  }
+  .section.description .description-links a:last-child {
+    margin-top: 32px;
+  }
 }
 .section.description a {
   display: inline-block;
@@ -706,9 +733,19 @@ footer .social a:last-child {
 .design-experience-text h2 {
   font: 600 49px/49px "ivypresto-display", sans-serif;
 }
+@media (max-width: 767px) {
+  .design-experience-text h2 {
+    font: 600 30px/30px "ivypresto-display", sans-serif;
+  }
+}
 .design-experience-text h3 {
   font: 300 25px/33px "ivypresto-display", sans-serif;
   margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .design-experience-text h3 {
+    font: 300 20px/30px "ivypresto-display", sans-serif;
+  }
 }
 .design-experience-text p {
   font: 400 16px/24px "freight-sans-pro", sans-serif;
@@ -731,16 +768,22 @@ footer .social a:last-child {
   background: linear-gradient(269.32deg, #DC44F4 1.09%, #C163EE 51.81%, #3C02B6 100.09%);
 }
 .design-experience-container {
+  margin-top: 200px;
   position: relative;
   z-index: 1;
 }
+@media (max-width: 992px) {
+  .design-experience-container {
+    margin-top: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience-container {
+    margin-top: 100px;
+  }
+}
 .design-experience {
   margin-bottom: 220px;
-}
-@media (max-width: 1399px) {
-  .design-experience {
-    display: none;
-  }
 }
 .design-experience__img-mob {
   transition: all 1s ease-in-out 0.4s;
@@ -864,6 +907,107 @@ footer .social a:last-child {
   display: block;
   margin-bottom: 5px;
 }
+@media (max-width: 1399px) {
+  .design-experience.flowerful .design-experience-text {
+    margin-top: 190px;
+    width: 450px;
+  }
+  .design-experience.flowerful .design-experience__img-mob {
+    left: 618px;
+    bottom: -133px;
+    position: absolute;
+    max-height: 340px;
+  }
+  .design-experience.flowerful .design-experience__img-bg {
+    position: relative;
+    max-width: 800px;
+    display: block;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+  }
+  .design-experience.flowerful .design-experience__img-screen {
+    position: absolute;
+    bottom: -140px;
+    right: auto;
+    left: -4px;
+    max-width: 630px;
+  }
+  .design-experience.flowerful .design-experience__img-icon {
+    position: absolute;
+    top: -50px;
+    left: auto;
+    right: 750px;
+  }
+  .design-experience.flowerful .design-experience__img-gradient {
+    position: absolute;
+    top: -204px;
+    left: -215px;
+    max-width: 720px;
+  }
+  .design-experience.flowerful .design-experience__img-dots {
+    position: absolute;
+    bottom: -84px;
+    left: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .design-experience.flowerful .design-experience-text-container {
+    z-index: -1;
+  }
+  .design-experience.flowerful .design-experience__img-mob {
+    max-width: 111%;
+    left: 618px;
+    bottom: -133px;
+    position: absolute;
+    max-height: 340px;
+  }
+  .design-experience.flowerful .design-experience__img-bg {
+    position: relative;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+  }
+  .design-experience.flowerful .design-experience__img-screen {
+    max-width: 630px;
+  }
+  .design-experience.flowerful .design-experience__img-icon {
+    right: 550px;
+  }
+  .design-experience.flowerful .design-experience__img-dots {
+    position: absolute;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.flowerful .design-experience-text {
+    margin-top: 120px;
+    width: 74%;
+  }
+  .design-experience.flowerful .design-experience__img-mob {
+    left: 305px;
+    bottom: -107px;
+    position: absolute;
+    max-height: 160px;
+  }
+  .design-experience.flowerful .design-experience__img-bg {
+    position: relative;
+    max-width: 400px;
+    left: auto;
+    right: -20px;
+  }
+  .design-experience.flowerful .design-experience__img-screen {
+    left: -10px;
+    bottom: -112px;
+    max-width: 320px;
+  }
+  .design-experience.flowerful .design-experience__img-icon {
+    right: 325px;
+    width: 60px;
+    top: -25px;
+  }
+}
 .design-experience.spa {
   padding-bottom: 114px;
 }
@@ -960,7 +1104,7 @@ footer .social a:last-child {
   left: 35px;
 }
 .design-experience.golf .design-experience-text p {
-  width: 320px;
+  width: 350px;
 }
 .design-experience.golf .design-experience__img-bg {
   position: relative;
@@ -970,12 +1114,12 @@ footer .social a:last-child {
 .design-experience.golf .design-experience__img-mob {
   position: absolute;
   right: 275px;
-  bottom: -54px;
+  bottom: -90px;
   max-width: 170px;
 }
 .design-experience.golf .design-experience__img-screen {
   position: absolute;
-  bottom: -55px;
+  bottom: -95px;
   right: 448px;
   max-width: 574px;
 }
@@ -1278,6 +1422,481 @@ footer .social a:last-child {
   top: -51px;
   left: 898px;
   width: 133px;
+}
+@media (max-width: 992px) {
+  .design-experience.design-experience-universal {
+    margin-bottom: 200px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .design-experience.design-experience-universal .design-experience-image-container {
+    position: relative;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal {
+    margin-bottom: 100px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .design-experience.design-experience-universal .design-experience-image-container {
+    position: relative;
+  }
+}
+@media (max-width: 1399px) {
+  .design-experience.design-experience-universal .design-experience-text {
+    margin-top: 190px;
+  }
+  .design-experience.design-experience-universal .design-experience__img-mob {
+    left: 618px;
+    bottom: -133px;
+    position: absolute;
+    max-height: 340px;
+  }
+  .design-experience.design-experience-universal .design-experience__img-bg {
+    position: relative;
+    max-width: 800px;
+    display: block;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+  }
+  .design-experience.design-experience-universal .design-experience__img-screen {
+    position: absolute;
+    bottom: -140px;
+    right: auto;
+    left: -4px;
+    max-width: 630px;
+  }
+  .design-experience.design-experience-universal .design-experience__img-icon {
+    position: absolute;
+    top: -50px;
+    left: auto;
+    right: 750px;
+  }
+  .design-experience.design-experience-universal .design-experience__img-gradient {
+    position: absolute;
+    top: -204px;
+    left: -215px;
+    max-width: 720px;
+  }
+  .design-experience.design-experience-universal .design-experience__img-dots {
+    position: absolute;
+    bottom: -84px;
+    left: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .design-experience.design-experience-universal .design-experience-text {
+    margin-top: 260px;
+    width: 100%;
+  }
+  .design-experience.design-experience-universal .design-experience-text p {
+    width: 100%;
+  }
+  .design-experience.design-experience-universal .design-experience__img-mob {
+    max-width: 111%;
+    left: calc(75vw - 10px);
+    top: auto;
+    bottom: -233px;
+    position: absolute;
+    max-height: 340px;
+  }
+  .design-experience.design-experience-universal .design-experience__img-bg {
+    position: relative;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+  }
+  .design-experience.design-experience-universal .design-experience__img-screen {
+    max-width: 75vw;
+    bottom: -240px;
+  }
+  .design-experience.design-experience-universal .design-experience__img-icon {
+    right: 550px;
+  }
+  .design-experience.design-experience-universal .design-experience__img-dots-mobile {
+    position: absolute;
+    bottom: -200px;
+    right: -20px;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal .design-experience-text {
+    margin-top: 120px;
+    width: 100%;
+  }
+  .design-experience.design-experience-universal .design-experience__img-mob {
+    left: calc(75vw - 10px);
+    top: auto;
+    bottom: -107px;
+    position: absolute;
+    max-height: 160px;
+  }
+  .design-experience.design-experience-universal .design-experience__img-bg {
+    position: relative;
+    max-width: calc(100vw - 35px);
+    left: auto;
+    right: -20px;
+  }
+  .design-experience.design-experience-universal .design-experience__img-screen {
+    left: -10px;
+    top: auto;
+    bottom: -112px;
+    max-width: 75vw;
+  }
+  .design-experience.design-experience-universal .design-experience__img-icon {
+    right: calc(100vw - 35px - 70px);
+    width: 60px;
+    top: -25px;
+  }
+  .design-experience.design-experience-universal .design-experience__img-dots-mobile {
+    bottom: -290px;
+    right: -20px;
+  }
+}
+@media (max-width: 992px) {
+  .design-experience.design-experience-universal:nth-child(even) .design-experience__img-mob {
+    left: auto;
+    right: calc(75vw - 30px);
+  }
+  .design-experience.design-experience-universal:nth-child(even) .design-experience__img-bg {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .design-experience.design-experience-universal:nth-child(even) .design-experience__img-screen {
+    left: auto;
+    right: -20px;
+    max-width: 75vw;
+  }
+  .design-experience.design-experience-universal:nth-child(even) .design-experience__img-icon {
+    left: 550px;
+    right: auto;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal:nth-child(even) .design-experience-text {
+    margin-top: 120px;
+  }
+  .design-experience.design-experience-universal:nth-child(even) .design-experience-text a {
+    height: 42px;
+  }
+  .design-experience.design-experience-universal:nth-child(even) .design-experience__img-mob {
+    left: auto;
+    right: calc(75vw - 10px);
+  }
+  .design-experience.design-experience-universal:nth-child(even) .design-experience__img-bg {
+    left: -50px;
+    right: auto;
+  }
+  .design-experience.design-experience-universal:nth-child(even) .design-experience__img-screen {
+    right: -10px;
+    left: auto;
+  }
+  .design-experience.design-experience-universal:nth-child(even) .design-experience__img-icon {
+    right: auto;
+    left: calc(100vw - 35px - 70px);
+  }
+  .design-experience.design-experience-universal:nth-child(even) .design-experience__img-dots-mobile {
+    bottom: -290px;
+    right: -20px;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal.bloom .design-experience-text-container {
+    z-index: -1;
+  }
+  .design-experience.design-experience-universal.bloom .design-experience__img-dots {
+    top: -19px;
+    left: -154px;
+    z-index: -1;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal.flowerful .design-experience-text-container {
+    z-index: -1;
+  }
+  .design-experience.design-experience-universal.flowerful .design-experience__img-mob {
+    width: auto;
+  }
+  .design-experience.design-experience-universal.flowerful .design-experience__img-dots {
+    top: -19px;
+    left: -20px;
+    z-index: -1;
+  }
+}
+@media (max-width: 992px) {
+  .design-experience.design-experience-universal.spa .design-experience-text {
+    left: 0;
+  }
+  .design-experience.design-experience-universal.spa .design-experience__img-mob {
+    width: auto;
+  }
+  .design-experience.design-experience-universal.spa .design-experience__img-spa {
+    left: -115px;
+    top: -15px;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal.spa .design-experience-text {
+    margin-top: 140px;
+    left: 0;
+  }
+  .design-experience.design-experience-universal.spa .design-experience-text p {
+    width: auto;
+  }
+  .design-experience.design-experience-universal.spa .design-experience__img-mob {
+    width: auto;
+  }
+  .design-experience.design-experience-universal.spa .design-experience__img-spa {
+    left: -115px;
+    top: -15px;
+  }
+}
+@media (max-width: 992px) {
+  .design-experience.design-experience-universal.epartner .design-experience-text {
+    margin-top: 180px;
+  }
+  .design-experience.design-experience-universal.epartner .design-experience__img-screen {
+    bottom: -155px;
+  }
+  .design-experience.design-experience-universal.epartner .design-experience__img-mob {
+    bottom: -155px;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal.epartner .design-experience-image-container {
+    position: relative;
+  }
+  .design-experience.design-experience-universal.epartner .design-experience-text {
+    margin-top: 110px;
+  }
+  .design-experience.design-experience-universal.epartner .design-experience-text p {
+    width: auto;
+  }
+  .design-experience.design-experience-universal.epartner .design-experience__img-icon {
+    width: 80px;
+    top: 35px;
+    right: 10px;
+  }
+  .design-experience.design-experience-universal.epartner .design-experience__img-screen {
+    bottom: -85px;
+    max-height: 192px;
+    max-width: 75vw;
+  }
+  .design-experience.design-experience-universal.epartner .design-experience__img-mob {
+    bottom: -85px;
+    max-height: 192px;
+    max-width: 75vw;
+  }
+}
+@media (max-width: 992px) {
+  .design-experience.design-experience-universal.golf .design-experience-text {
+    left: 0;
+  }
+  .design-experience.design-experience-universal.golf .design-experience__img-icon-golf {
+    right: auto;
+    left: 567px;
+    top: -24px;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal.golf .design-experience-text {
+    left: 0;
+  }
+  .design-experience.design-experience-universal.golf .design-experience-text p {
+    width: auto;
+  }
+  .design-experience.design-experience-universal.golf .design-experience__img-icon {
+    width: 80px;
+    top: -45px;
+    left: 315px;
+  }
+  .design-experience.design-experience-universal.golf .design-experience__img-icon-golf {
+    top: -38px;
+    right: auto;
+    left: 317px;
+    max-width: 76px;
+  }
+  .design-experience.design-experience-universal.golf .design-experience__img-golf {
+    top: auto;
+    bottom: -225px;
+    right: 0;
+    max-width: 130px;
+  }
+}
+@media (max-width: 992px) {
+  .design-experience.design-experience-universal.homework .design-experience-text {
+    margin-top: 100px;
+  }
+  .design-experience.design-experience-universal.homework .design-experience__img-icon {
+    padding: 0;
+    z-index: 9;
+  }
+  .design-experience.design-experience-universal.homework .design-experience__img-screen {
+    top: auto;
+    bottom: -75px;
+  }
+  .design-experience.design-experience-universal.homework .design-experience__img-mob {
+    bottom: -75px;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal.homework .design-experience-text {
+    margin-top: 90px;
+  }
+  .design-experience.design-experience-universal.homework .design-experience__img-icon {
+    padding: 0;
+    z-index: 9;
+  }
+  .design-experience.design-experience-universal.homework .design-experience__img-screen {
+    bottom: -75px;
+  }
+  .design-experience.design-experience-universal.homework .design-experience__img-mob {
+    bottom: -75px;
+    width: auto;
+  }
+  .design-experience.design-experience-universal.homework .design-experience__square {
+    width: 22px;
+    bottom: 8px;
+    left: 337px;
+  }
+  .design-experience.design-experience-universal.homework .design-experience__circle {
+    width: 22px;
+    top: 125px;
+    left: 215px;
+  }
+  .design-experience.design-experience-universal.homework .design-experience__triangle {
+    width: 32px;
+    top: 81px;
+    left: 270px;
+  }
+}
+@media (max-width: 992px) {
+  .design-experience.design-experience-universal.vtail .design-experience-text {
+    position: static;
+  }
+  .design-experience.design-experience-universal.vtail .design-experience-text h2,
+  .design-experience.design-experience-universal.vtail .design-experience-text h3,
+  .design-experience.design-experience-universal.vtail .design-experience-text p {
+    color: #212529;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal.vtail .design-experience-text {
+    position: static;
+  }
+  .design-experience.design-experience-universal.vtail .design-experience-text h2,
+  .design-experience.design-experience-universal.vtail .design-experience-text h3,
+  .design-experience.design-experience-universal.vtail .design-experience-text p {
+    color: #212529;
+  }
+  .design-experience.design-experience-universal.vtail .design-experience__img-icon {
+    right: 255px;
+    width: 70px;
+    top: 35px;
+  }
+}
+@media (max-width: 992px) {
+  .design-experience.design-experience-universal.baits .design-experience-text {
+    margin-top: 230px;
+  }
+  .design-experience.design-experience-universal.baits .design-experience__img-mob {
+    width: 160px;
+    top: 210px;
+    bottom: auto;
+    left: -110px;
+    right: auto;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal.baits .design-experience-text {
+    margin-top: 140px;
+    margin-left: 0;
+    bottom: auto;
+  }
+  .design-experience.design-experience-universal.baits .design-experience__img-mob {
+    width: 130px;
+    top: 120px;
+    bottom: auto;
+    left: auto;
+    right: -130px;
+  }
+}
+@media (max-width: 992px) {
+  .design-experience.design-experience-universal.writezilla .design-experience-text-container {
+    padding-top: 0;
+  }
+  .design-experience.design-experience-universal.writezilla .design-experience__img-decor {
+    top: 210px;
+  }
+  .design-experience.design-experience-universal.writezilla .design-experience__img-decor-2 {
+    top: 265px;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal.writezilla .design-experience-text-container {
+    padding-top: 0;
+  }
+  .design-experience.design-experience-universal.writezilla .design-experience__img-decor {
+    top: 107px;
+    right: auto;
+    left: -120px;
+    max-width: 140px;
+  }
+  .design-experience.design-experience-universal.writezilla .design-experience__img-decor-2 {
+    top: 150px;
+    right: auto;
+    left: -80px;
+    max-width: 57px;
+  }
+}
+@media (max-width: 992px) {
+  .design-experience.design-experience-universal.ebooks .design-experience-text {
+    margin-top: 180px;
+  }
+  .design-experience.design-experience-universal.ebooks .design-experience__img-screen {
+    bottom: -160px;
+  }
+}
+@media (max-width: 992px) {
+  .design-experience.design-experience-universal:nth-child(13) .design-experience-text {
+    left: auto;
+    margin-top: 140px;
+  }
+  .design-experience.design-experience-universal:nth-child(13) .design-experience__img-mob {
+    left: auto;
+    right: calc(62vw - 20px);
+    bottom: -95px;
+  }
+  .design-experience.design-experience-universal:nth-child(13) .design-experience__img-screen {
+    max-height: inherit;
+    max-width: 62vw;
+    left: auto;
+    right: -15px;
+    top: auto;
+    bottom: -93px;
+  }
+}
+@media (max-width: 767px) {
+  .design-experience.design-experience-universal:nth-child(13) .design-experience-text {
+    left: auto;
+  }
+  .design-experience.design-experience-universal:nth-child(13) .design-experience__img-mob {
+    left: auto;
+    right: 246px;
+    height: 190px;
+    max-height: 190px;
+    bottom: -95px;
+  }
+  .design-experience.design-experience-universal:nth-child(13) .design-experience__img-screen {
+    left: auto;
+    right: -15px;
+    height: 190px;
+    bottom: -95px;
+  }
 }
 .design-experience__img-icon {
   animation: rotate-infinite 20s linear infinite;
