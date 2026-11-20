@@ -37,7 +37,7 @@
         </div>
 
         <video id="background-video" autoplay loop muted playsinline poster="static/banner.webp">
-            <source src="static/background-optimized.mp4" type="video/mp4">
+            <source data-src="static/background-optimized.mp4" type="video/mp4">
         </video>
         <div class="container banner-top">
             <div class="d-flex justify-content-between">
@@ -56,7 +56,8 @@
                 </div>
             </div>
         </div>
-        <header class="banner-text d-block d-lg-none">
+        <h1 class="visually-hidden">Olga Bannova, Senior Visual Designer with 15+ years of experience</h1>
+        <header class="banner-text d-block d-lg-none" aria-hidden="true">
             <div class="line"><span class="small">Olga Bannova</span> senior</div>
             <div class="line">visual <span class="small wave_blue d-none d-md-block">15+ years of experience</span></div>
             <div class="line">designer</div>
@@ -64,7 +65,7 @@
             <div class="grain grain-top"></div>
             <div class="grain grain-bottom"></div>
         </header>
-        <header class="banner-text d-none d-lg-block">
+        <header class="banner-text d-none d-lg-block" aria-hidden="true">
             <div class="line"><span id="banner-text4" class="small"></span> <span class="invisible">•</span><span id="banner-text1" ></span></div>
             <div class="line"><span id="banner-text2"></span> <span class="invisible">•</span><span id="banner-text5" class="small wave_blue d-none d-md-block"></span></div>
             <div class="line"><span class="invisible">•</span><span id="banner-text3"></span></div>
@@ -591,5 +592,6 @@
 </article>
 <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 <script src="script.js"></script>
+<script type="module" src="static/js/hero-loader.js"></script>
 </body>
 </html>

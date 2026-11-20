@@ -2099,3 +2099,22 @@ footer {
     transform: rotate(360deg);
   }
 }
+
+/* 3D hero (static/js/hero-3d.js); the video stays underneath as fallback */
+.banner .hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.9s ease;
+}
+.banner .hero-canvas.is-ready {
+  opacity: 1;
+}
+.hero-3d-on .banner-top svg {
+  visibility: hidden;
+}
