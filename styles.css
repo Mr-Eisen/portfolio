@@ -421,60 +421,6 @@ main #banner-circle-bottom {
   right: 0;
   bottom: 0;
 }
-.section.portfolio {
-  padding-top: 0;
-  margin-top: 0;
-  margin-bottom: 50px;
-  max-width: 100%;
-}
-.section.portfolio p {
-  font: 300 24px "Public Sans", sans-serif;
-  line-height: 1.7;
-  color: #2C067E;
-  margin-bottom: 35px;
-}
-.section.portfolio a {
-  display: block;
-  text-transform: uppercase;
-  color: #2c067e;
-  font: 400 16px/47px "freight-sans-pro", sans-serif;
-  text-decoration: none;
-  border: 1px solid #2c067e;
-  border-radius: 40px;
-  padding: 0 15px 2px;
-  position: relative;
-  margin: 0 0 35px;
-  transition: 0.3s all;
-}
-.section.portfolio a.filled,
-.section.portfolio a:hover {
-  color: #fff;
-  border-color: transparent;
-  background: #2c067e;
-}
-.section.portfolio a span {
-  position: relative;
-  top: 1px;
-}
-.section.portfolio .position-links {
-  margin-bottom: 20px;
-}
-.section.portfolio .button {
-  background: #2c067e;
-  color: #fff;
-  padding: 16px 22px 14px;
-  font: 600 14px/30px "quasimoda", sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  transition: 0.3s all;
-}
-.section.portfolio .button:hover {
-  color: #2c067e;
-  outline: 1px solid #2c067e;
-  background: #fff;
-}
 footer {
   overflow: hidden;
   padding: 100px 0 40px;
@@ -668,71 +614,6 @@ footer .social a:last-child {
   font: 600 16px/24px "Public Sans", sans-serif;
   color: #2c067e;
 }
-.portfolio-title-container {
-  position: relative;
-  height: 190px;
-  margin-bottom: 120px;
-}
-@media (max-width: 991px) {
-  .portfolio-title-container {
-    height: 100px;
-    margin-bottom: 35px;
-  }
-}
-.portfolio-title-container .portfolio-title {
-  left: 0;
-  height: 190px;
-  position: absolute;
-  overflow-x: hidden;
-}
-@media (max-width: 991px) {
-  .portfolio-title-container .portfolio-title {
-    height: 100px;
-  }
-}
-.portfolio-title-container .portfolio-title h2 {
-  text-transform: uppercase;
-  font: 400 200px/1 "Public Sans", sans-serif;
-  width: 100%;
-  padding-top: 0;
-  margin: 0 auto;
-  white-space: nowrap;
-}
-@media (max-width: 991px) {
-  .portfolio-title-container .portfolio-title h2 {
-    font-size: 100px;
-  }
-}
-.portfolio-title-container .portfolio-title h2 span {
-  background: linear-gradient(90deg, #dc44f4 30%, #c163ee 50%, #3c02b6 80%);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: inline-block;
-  animation: scrolling-left2 90s linear infinite;
-  animation-delay: 1s;
-}
-.portfolio-title-container .portfolio-title h2 span + span {
-  background: linear-gradient(90deg, #3c02b6 30%, #c163ee 50%, #dc44f4 80%);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-/* scrolling-left is continuous/repeatly text */
-@keyframes scrolling-left1 {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes scrolling-left2 {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
-}
 .design-experience-text-container {
   z-index: 1;
 }
@@ -835,12 +716,6 @@ footer .social a:last-child {
   position: absolute;
   top: -50px;
   left: -42px;
-}
-.design-experience.anna .design-experience__img-gradient {
-  position: absolute;
-  top: -204px;
-  left: -215px;
-  max-width: 720px;
 }
 .design-experience.anna .design-experience__img-dots {
   position: absolute;
@@ -950,12 +825,6 @@ footer .social a:last-child {
     top: -50px;
     left: auto;
     right: 750px;
-  }
-  .design-experience.flowerful .design-experience__img-gradient {
-    position: absolute;
-    top: -204px;
-    left: -215px;
-    max-width: 720px;
   }
   .design-experience.flowerful .design-experience__img-dots {
     position: absolute;
@@ -1183,12 +1052,6 @@ footer .social a:last-child {
   position: absolute;
   top: -70px;
   right: 13px;
-}
-.design-experience.blue .design-experience__img-gradient {
-  position: absolute;
-  top: -204px;
-  left: -215px;
-  max-width: 720px;
 }
 .design-experience.blue .design-experience__img-dots {
   position: absolute;
@@ -1485,12 +1348,6 @@ footer .social a:last-child {
     top: -50px;
     left: auto;
     right: 750px;
-  }
-  .design-experience.design-experience-universal .design-experience__img-gradient {
-    position: absolute;
-    top: -204px;
-    left: -215px;
-    max-width: 720px;
   }
   .design-experience.design-experience-universal .design-experience__img-dots {
     position: absolute;
@@ -1981,7 +1838,6 @@ footer .hero-canvas.is-ready {
   opacity: 1;
 }
 /* ---------- button motion ---------- */
-
 /* case buttons: the gradient glides instead of jumping, a sheen sweeps across, the button lifts */
 .design-experience-text a {
   position: relative;
@@ -2016,10 +1872,13 @@ footer .hero-canvas.is-ready {
   animation: btn-sheen 0.8s ease;
 }
 @keyframes btn-sheen {
-  from { transform: translateX(-120%); }
-  to { transform: translateX(120%); }
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(120%);
+  }
 }
-
 /* "Contact me": the corner brackets open outward like a viewfinder */
 .description-links .contact-btn {
   transition: color 0.3s ease;
@@ -2039,7 +1898,6 @@ footer .hero-canvas.is-ready {
 .description-links .contact-btn:focus-visible .contact-btn-border + .contact-btn-border {
   translate: 6px 6px;
 }
-
 /* "Download resume": the underline redraws, the file icon nods downward */
 .description-links a:not(.contact-btn) span {
   border-bottom-color: transparent;
@@ -2057,17 +1915,35 @@ footer .hero-canvas.is-ready {
   animation: icon-nod 0.6s ease;
 }
 @keyframes link-redraw {
-  0% { background-size: 100% 1px; background-position: 100% 100%; }
-  45% { background-size: 0% 1px; background-position: 100% 100%; }
-  55% { background-size: 0% 1px; background-position: 0% 100%; }
-  100% { background-size: 100% 1px; background-position: 0% 100%; }
+  0% {
+    background-size: 100% 1px;
+    background-position: 100% 100%;
+  }
+  45% {
+    background-size: 0% 1px;
+    background-position: 100% 100%;
+  }
+  55% {
+    background-size: 0% 1px;
+    background-position: 0% 100%;
+  }
+  100% {
+    background-size: 100% 1px;
+    background-position: 0% 100%;
+  }
 }
 @keyframes icon-nod {
-  0%, 100% { transform: translateY(0); }
-  35% { transform: translateY(4px); }
-  65% { transform: translateY(-1px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(4px);
+  }
+  65% {
+    transform: translateY(-1px);
+  }
 }
-
 /* email and phone links: an underline slides in from the left */
 .banner .banner-top a,
 footer .contacts .info a {
@@ -2084,7 +1960,6 @@ footer .contacts .info a:focus-visible {
   background-size: 100% 1px;
   background-position: 0% 100%;
 }
-
 /* footer social icons lift with a soft brand glow */
 footer .social a {
   transition: transform 0.25s ease, filter 0.25s ease;
@@ -2094,7 +1969,6 @@ footer .social a:focus-visible {
   transform: translateY(-3px);
   filter: drop-shadow(0 4px 8px rgba(222, 83, 245, 0.55));
 }
-
 /* visible focus for keyboard users */
 .design-experience-text a:focus-visible,
 .description-links a:focus-visible,
@@ -2103,7 +1977,6 @@ footer a:focus-visible {
   outline: 2px solid #C163EE;
   outline-offset: 4px;
 }
-
 /* reduced motion: colours still change, nothing moves */
 @media (prefers-reduced-motion: reduce) {
   .design-experience-text a,
@@ -2122,7 +1995,6 @@ footer a:focus-visible {
   }
 }
 /* ---------- hero details ---------- */
-
 /* dot grids next to the title, redrawn live by static/js/hero-dots.js */
 .banner .grain.is-live {
   background-image: none;
@@ -2135,7 +2007,6 @@ footer a:focus-visible {
   height: calc(100% + 64px);
   pointer-events: none;
 }
-
 /* rings at the bottom left: the gradient slowly turns around the rings' centre, the rings breathe */
 #banner-circle-bottom path {
   transform-box: view-box;
@@ -2143,13 +2014,19 @@ footer a:focus-visible {
   animation: rings-turn 40s linear infinite, rings-breathe 7s ease-in-out infinite;
 }
 @keyframes rings-turn {
-  to { rotate: 360deg; }
+  to {
+    rotate: 360deg;
+  }
 }
 @keyframes rings-breathe {
-  0%, 100% { scale: 1; }
-  50% { scale: 1.035; }
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.035;
+  }
 }
-
 /* rings behind "15+ years": they breathe, and an echo radiates outward like sonar */
 .wave_blue[data-typeit-id]:after {
   animation: wave-breathe 6s ease-in-out 1s infinite;
@@ -2169,14 +2046,24 @@ footer a:focus-visible {
   animation: wave-echo 4.5s ease-out 1.2s infinite;
 }
 @keyframes wave-breathe {
-  0%, 100% { scale: 1; }
-  50% { scale: 1.04; }
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.04;
+  }
 }
 @keyframes wave-echo {
-  0% { scale: 0.9; opacity: 0.5; }
-  100% { scale: 1.4; opacity: 0; }
+  0% {
+    scale: 0.9;
+    opacity: 0.5;
+  }
+  100% {
+    scale: 1.4;
+    opacity: 0;
+  }
 }
-
 @media (prefers-reduced-motion: reduce) {
   #banner-circle-bottom path,
   .wave_blue:after {
