@@ -1980,4 +1980,145 @@ footer .hero-canvas {
 footer .hero-canvas.is-ready {
   opacity: 1;
 }
+/* ---------- button motion ---------- */
+
+/* case buttons: the gradient glides instead of jumping, a sheen sweeps across, the button lifts */
+.design-experience-text a {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, #DC44F4 0%, #C163EE 25%, #3C02B6 50%, #C163EE 75%, #DC44F4 100%);
+  background-size: 200% 100%;
+  background-position: 0% 0;
+  transition: background-position 0.6s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.design-experience-text a:hover,
+.design-experience-text a:focus-visible {
+  background-image: linear-gradient(90deg, #DC44F4 0%, #C163EE 25%, #3C02B6 50%, #C163EE 75%, #DC44F4 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px -14px rgba(60, 2, 182, 0.75);
+}
+.design-experience-text a:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 6px 14px -10px rgba(60, 2, 182, 0.75);
+}
+.design-experience-text a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
+  transform: translateX(-120%);
+  pointer-events: none;
+}
+.design-experience-text a:hover::after,
+.design-experience-text a:focus-visible::after {
+  animation: btn-sheen 0.8s ease;
+}
+@keyframes btn-sheen {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(120%); }
+}
+
+/* "Contact me": the corner brackets open outward like a viewfinder */
+.description-links .contact-btn {
+  transition: color 0.3s ease;
+}
+.description-links .contact-btn .contact-btn-border {
+  transition: translate 0.35s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+.description-links .contact-btn:hover,
+.description-links .contact-btn:focus-visible {
+  color: #3C02B6;
+}
+.description-links .contact-btn:hover .contact-btn-border,
+.description-links .contact-btn:focus-visible .contact-btn-border {
+  translate: -6px -6px;
+}
+.description-links .contact-btn:hover .contact-btn-border + .contact-btn-border,
+.description-links .contact-btn:focus-visible .contact-btn-border + .contact-btn-border {
+  translate: 6px 6px;
+}
+
+/* "Download resume": the underline redraws, the file icon nods downward */
+.description-links a:not(.contact-btn) span {
+  border-bottom-color: transparent;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: 100% 100%;
+}
+.description-links a:not(.contact-btn):hover span,
+.description-links a:not(.contact-btn):focus-visible span {
+  animation: link-redraw 0.6s ease;
+}
+.description-links a:not(.contact-btn):hover svg,
+.description-links a:not(.contact-btn):focus-visible svg {
+  animation: icon-nod 0.6s ease;
+}
+@keyframes link-redraw {
+  0% { background-size: 100% 1px; background-position: 100% 100%; }
+  45% { background-size: 0% 1px; background-position: 100% 100%; }
+  55% { background-size: 0% 1px; background-position: 0% 100%; }
+  100% { background-size: 100% 1px; background-position: 0% 100%; }
+}
+@keyframes icon-nod {
+  0%, 100% { transform: translateY(0); }
+  35% { transform: translateY(4px); }
+  65% { transform: translateY(-1px); }
+}
+
+/* email and phone links: an underline slides in from the left */
+.banner .banner-top a,
+footer .contacts .info a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  background-position: 100% 100%;
+  transition: background-size 0.35s ease;
+}
+.banner .banner-top a:hover,
+.banner .banner-top a:focus-visible,
+footer .contacts .info a:hover,
+footer .contacts .info a:focus-visible {
+  background-size: 100% 1px;
+  background-position: 0% 100%;
+}
+
+/* footer social icons lift with a soft brand glow */
+footer .social a {
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+footer .social a:hover,
+footer .social a:focus-visible {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 8px rgba(222, 83, 245, 0.55));
+}
+
+/* visible focus for keyboard users */
+.design-experience-text a:focus-visible,
+.description-links a:focus-visible,
+.banner .banner-top a:focus-visible,
+footer a:focus-visible {
+  outline: 2px solid #C163EE;
+  outline-offset: 4px;
+}
+
+/* reduced motion: colours still change, nothing moves */
+@media (prefers-reduced-motion: reduce) {
+  .design-experience-text a,
+  .design-experience-text a::after,
+  .description-links a,
+  .description-links a *,
+  .banner .banner-top a,
+  footer a {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    translate: none !important;
+  }
+  .design-experience-text a::after {
+    display: none;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

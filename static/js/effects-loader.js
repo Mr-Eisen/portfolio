@@ -5,7 +5,8 @@
  *   loaded when the section gets near the viewport; without it the section stays as designed;
  * - case studies: CSS 3D depth on the existing layers (case-depth.js); no WebGL needed;
  * - footer: the hero's live liquid (hero-3d.js, no rings), loaded when the footer gets near
- *   the viewport; without it the footer keeps its static footer.svg.
+ *   the viewport; without it the footer keeps its static footer.svg;
+ * - buttons: a slight pull toward a nearby cursor (button-magnet.js); hover animations are CSS.
  * With "reduce motion" both effects render a single still frame, and the hero
  * fallback shows the poster only.
  */
@@ -84,3 +85,7 @@ if (footer && webgl2) {
   );
   nearFooter.observe(footer);
 }
+
+import('./button-magnet.js')
+  .then(({ initButtonMagnet }) => initButtonMagnet({ reduceMotion }))
+  .catch(() => {}); // buttons keep their CSS hover animation
