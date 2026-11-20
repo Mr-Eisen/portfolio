@@ -4,7 +4,10 @@
  * Replaces the looping background video with a shader that keeps the same look
  * (dark glossy folds, soft grey highlights) but reacts to the cursor, and turns the
  * flat concentric-rings SVG into 3D rings that tilt toward the pointer.
- * The video stays as the fallback: see hero-loader.js.
+ * The video stays as the fallback: see effects-loader.js.
+ *
+ * Also used without rings for the footer, so the page starts and ends with the
+ * same live liquid; the footer's static footer.svg stays underneath as fallback.
  */
 import {
   WebGLRenderer,
@@ -51,6 +54,8 @@ const LIQUID_FRAG = /* glsl */ `
   uniform vec2 uVel;
   uniform float uPush;
   uniform float uScroll;
+  uniform float uFreq;
+  uniform float uExposure;
   uniform vec3 uViolet;
   uniform vec3 uPink;
   varying vec2 vUv;
@@ -91,7 +96,7 @@ const LIQUID_FRAG = /* glsl */ `
   }
 
   vec2 toPlane(vec2 uv) {
-    return (uv - 0.5) * vec2(uAspect, 1.0) * (1.7 - uScroll * 0.35);
+    return (uv - 0.5) * vec2(uAspect, 1.0) * uFreq * (1.0 - uScroll * 0.206);
   }
 
   // Height of the satin surface. Domain-warped noise gives the long folds,
@@ -139,7 +144,7 @@ const LIQUID_FRAG = /* glsl */ `
 
     col = pow(col, vec3(1.15)); // deepen the mid-tones, keep highlights
     float vig = smoothstep(1.25, 0.25, length((vUv - 0.5) * vec2(1.15, 1.0)));
-    col *= mix(0.35, 1.0, vig) * (1.0 - uScroll * 0.45);
+    col *= mix(0.35, 1.0, vig) * (1.0 - uScroll * 0.45) * uExposure;
 
     float dither = fract(sin(dot(gl_FragCoord.xy, vec2(12.9898, 78.233))) * 43758.5453);
     col += (dither - 0.5) / 255.0;
@@ -196,7 +201,16 @@ export function renderHeroAt(seconds, mouseX = 0.62, mouseY = 0.55, pushStrength
   active?.renderAt(seconds, mouseX, mouseY, pushStrength);
 }
 
-export function initHero3D({ banner, rings: ringsSvg = null, reduceMotion = false, onFail = () => {} }) {
+/**
+ * @param {object} o
+ * @param {HTMLElement} o.banner  container the canvas fills (the hero banner, or the footer)
+ * @param {SVGElement} [o.rings]  flat rings SVG to replace with 3D rings (hero only)
+ * @param {number} [o.exposure]   brightness multiplier; a short strip catches fewer highlights
+ */
+export function initHero3D({ banner, rings: ringsSvg = null, reduceMotion = false, exposure = 1, onFail = () => {} }) {
+  if (banner.querySelector(':scope > .hero-canvas')) return null; // already running here
+  // Only the instance that draws the 3D rings hides the flat SVG ones.
+  const hidesSvgRings = !!ringsSvg;
   let renderer;
   try {
     renderer = new WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
@@ -233,6 +247,8 @@ export function initHero3D({ banner, rings: ringsSvg = null, reduceMotion = fals
       uVel: { value: new Vector2() },
       uPush: { value: 0.35 },
       uScroll: { value: 0 },
+      uFreq: { value: 1.7 },
+      uExposure: { value: exposure },
       uViolet: { value: VIOLET },
       uPink: { value: PINK },
     },
@@ -318,6 +334,9 @@ export function initHero3D({ banner, rings: ringsSvg = null, reduceMotion = fals
     renderer.getDrawingBufferSize(drawSize);
     rt.setSize(Math.max(2, Math.round(W * liquidScale)), Math.max(2, Math.round(H * liquidScale)));
     liquidMat.uniforms.uAspect.value = W / H;
+    // keep folds and the cursor's reach the same size in pixels as in a full-screen hero,
+    // so a shorter container (the footer) shows the same liquid, not a busier one
+    liquidMat.uniforms.uFreq.value = 1.7 * Math.min(1, H / window.innerHeight);
     ringCamera.aspect = W / H;
     ringCamera.position.set(0, 0, H / 2 / Math.tan((FOV * Math.PI) / 360));
     ringCamera.updateProjectionMatrix();
@@ -476,7 +495,7 @@ export function initHero3D({ banner, rings: ringsSvg = null, reduceMotion = fals
     rt.dispose();
     renderer.dispose();
     canvas.remove();
-    document.documentElement.classList.remove('hero-3d-on');
+    if (hidesSvgRings) document.documentElement.classList.remove('hero-3d-on');
     if (active === controller) active = null;
   }
 
@@ -509,7 +528,7 @@ export function initHero3D({ banner, rings: ringsSvg = null, reduceMotion = fals
   // Reveal only after the first frame exists, so the poster never flashes to black.
   setTimeout(() => {
     canvas.classList.add('is-ready');
-    document.documentElement.classList.add('hero-3d-on');
+    if (hidesSvgRings) document.documentElement.classList.add('hero-3d-on');
   }, 0);
   start();
   return controller;
