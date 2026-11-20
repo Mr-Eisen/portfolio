@@ -2136,3 +2136,12 @@ footer {
 .portfolio-title-static .portfolio-sand-canvas.is-ready {
   opacity: 1;
 }
+
+/* depth for the case studies (static/js/case-depth.js): layers move with the individual
+   translate/rotate properties, so only those are kept out of the reveal transition */
+.case-depth-on .design-experience {
+  perspective: 1800px;
+}
+.case-depth-on .design-experience [data-depth] {
+  transition-property: opacity, transform;
+}
