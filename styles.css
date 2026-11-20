@@ -1921,4 +1921,63 @@ footer .social a:last-child {
     transform: rotate(360deg);
   }
 }
+/* 3D hero (static/js/hero-3d.js); the video stays underneath as fallback */
+.banner .hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.9s ease;
+}
+.banner .hero-canvas.is-ready {
+  opacity: 1;
+}
+.hero-3d-on .banner-top svg {
+  visibility: hidden;
+}
+/* sand made from the PORTFOLIO glow (static/js/portfolio-sand.js); sits between the glow and the title */
+.portfolio-title-static:before {
+  transition: opacity 1s ease;
+}
+.portfolio-title-static.sand-on:before {
+  opacity: 0.55;
+}
+.portfolio-title-static .portfolio-sand-canvas {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.portfolio-title-static .portfolio-sand-canvas.is-ready {
+  opacity: 1;
+}
+/* depth for the case studies (static/js/case-depth.js): layers move with the individual
+   translate/rotate properties, so only those are kept out of the reveal transition */
+.case-depth-on .design-experience {
+  perspective: 1800px;
+}
+.case-depth-on .design-experience [data-depth] {
+  transition-property: opacity, transform;
+}
+/* live liquid in the footer: the hero shader without rings (static/js/hero-3d.js);
+   footer.svg stays underneath as the fallback, the grain and contacts stay on top */
+footer .hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.9s ease;
+}
+footer .hero-canvas.is-ready {
+  opacity: 1;
+}
 /*# sourceMappingURL=styles.css.map */
