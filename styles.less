@@ -2145,3 +2145,20 @@ footer {
 .case-depth-on .design-experience [data-depth] {
   transition-property: opacity, transform;
 }
+
+/* live liquid in the footer: the hero shader without rings (static/js/hero-3d.js);
+   footer.svg stays underneath as the fallback, the grain and contacts stay on top */
+footer .hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.9s ease;
+}
+footer .hero-canvas.is-ready {
+  opacity: 1;
+}
