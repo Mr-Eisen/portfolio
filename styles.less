@@ -2304,3 +2304,69 @@ footer a:focus-visible {
     display: none;
   }
 }
+
+/* ---------- hero details ---------- */
+
+/* dot grids next to the title, redrawn live by static/js/hero-dots.js */
+.banner .grain.is-live {
+  background-image: none;
+}
+.banner .grain .grain-canvas {
+  position: absolute;
+  top: -32px;
+  left: -32px;
+  width: calc(100% + 64px);
+  height: calc(100% + 64px);
+  pointer-events: none;
+}
+
+/* rings at the bottom left: the gradient slowly turns around the rings' centre, the rings breathe */
+#banner-circle-bottom path {
+  transform-box: view-box;
+  transform-origin: 13.3px 149px;
+  animation: rings-turn 40s linear infinite, rings-breathe 7s ease-in-out infinite;
+}
+@keyframes rings-turn {
+  to { rotate: 360deg; }
+}
+@keyframes rings-breathe {
+  0%, 100% { scale: 1; }
+  50% { scale: 1.035; }
+}
+
+/* rings behind "15+ years": they breathe, and an echo radiates outward like sonar */
+.wave_blue[data-typeit-id]:after {
+  animation: wave-breathe 6s ease-in-out 1s infinite;
+}
+.wave_blue[data-typeit-id]:before {
+  content: "";
+  position: absolute;
+  top: -99px;
+  left: -110px;
+  z-index: 0;
+  width: 244px;
+  height: 244px;
+  background: url("static/wave_blue.svg") 0 0 no-repeat;
+  background-size: cover;
+  opacity: 0;
+  pointer-events: none;
+  animation: wave-echo 4.5s ease-out 1.2s infinite;
+}
+@keyframes wave-breathe {
+  0%, 100% { scale: 1; }
+  50% { scale: 1.04; }
+}
+@keyframes wave-echo {
+  0% { scale: 0.9; opacity: 0.5; }
+  100% { scale: 1.4; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #banner-circle-bottom path,
+  .wave_blue:after {
+    animation: none !important;
+  }
+  .wave_blue:before {
+    display: none !important;
+  }
+}
