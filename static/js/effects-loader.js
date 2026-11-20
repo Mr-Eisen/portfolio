@@ -5,7 +5,9 @@
  *   loaded when the section gets near the viewport; without it the section stays as designed;
  * - case studies: CSS 3D depth on the existing layers (case-depth.js); no WebGL needed;
  * - footer: the hero's live liquid (hero-3d.js, no rings), loaded when the footer gets near
- *   the viewport; without it the footer keeps its static footer.svg.
+ *   the viewport; without it the footer keeps its static footer.svg;
+ * - buttons: a slight pull toward a nearby cursor (button-magnet.js); hover animations are CSS;
+ * - hero dot grids: dots react to the cursor like the sand (hero-dots.js, canvas 2D).
  * With "reduce motion" both effects render a single still frame, and the hero
  * fallback shows the poster only.
  */
@@ -83,4 +85,14 @@ if (footer && webgl2) {
     { rootMargin: '600px 0px' },
   );
   nearFooter.observe(footer);
+}
+
+import('./button-magnet.js')
+  .then(({ initButtonMagnet }) => initButtonMagnet({ reduceMotion }))
+  .catch(() => {}); // buttons keep their CSS hover animation
+
+if (banner) {
+  import('./hero-dots.js')
+    .then(({ initHeroDots }) => initHeroDots({ banner, reduceMotion }))
+    .catch(() => {}); // the dot grids stay as static images
 }
