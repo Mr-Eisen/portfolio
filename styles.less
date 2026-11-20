@@ -2118,3 +2118,21 @@ footer {
 .hero-3d-on .banner-top svg {
   visibility: hidden;
 }
+
+/* sand made from the PORTFOLIO glow (static/js/portfolio-sand.js); sits between the glow and the title */
+.portfolio-title-static:before {
+  transition: opacity 1s ease;
+}
+.portfolio-title-static.sand-on:before {
+  opacity: 0.55;
+}
+.portfolio-title-static .portfolio-sand-canvas {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.portfolio-title-static .portfolio-sand-canvas.is-ready {
+  opacity: 1;
+}
