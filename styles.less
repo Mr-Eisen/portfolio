@@ -401,59 +401,6 @@ main {
       }
     }
   }
-  &.portfolio {
-    padding-top: 0;
-    margin-top: 0;
-    margin-bottom: 50px;
-    max-width: 100%;
-    p {
-      font: 300 24px "Public Sans", sans-serif;
-      line-height: 1.7;
-      color: #2C067E;
-      margin-bottom: 35px;
-    }
-    a {
-      display: block;
-      text-transform: uppercase;
-      color: rgba(44, 6, 126, 1);
-      font: 400 16px/47px "freight-sans-pro", sans-serif;;
-      text-decoration: none;
-      border: 1px solid rgba(44, 6, 126, 1);
-      border-radius: 40px;
-      padding: 0 15px 2px;
-      position: relative;
-      margin: 0 0 35px;
-      transition: 0.3s all;
-      &.filled, &:hover {
-        color: #fff;
-        border-color: transparent;
-        background: rgba(44, 6, 126, 1);
-      }
-      span {
-        position: relative;
-        top: 1px;
-      }
-    }
-    .position-links {
-      margin-bottom: 20px;
-    }
-    .button {
-      background: rgba(44, 6, 126, 1);
-      color: #fff;
-      padding: 16px 22px 14px;
-      font: 600 14px/30px "quasimoda", sans-serif;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: none;
-      border-radius: 5px;
-      transition: 0.3s all;
-      &:hover {
-        color: rgba(44, 6, 126, 1);
-        outline: 1px solid rgba(44, 6, 126, 1);
-        background: #fff;
-      }
-    }
-  }
 }
 
 footer {
@@ -646,66 +593,7 @@ footer {
   }
 }
 
-.portfolio-title-container {
-  position: relative;
-  height: 190px;
-  margin-bottom: 120px;
-  @media (max-width: 991px) {
-    height: 100px;
-    margin-bottom: 35px;
-  }
-  .portfolio-title {
-    left:0;
-    height: 190px;
-    position: absolute;
-    overflow-x: hidden;
-    @media (max-width: 991px) {
-      height: 100px;
-    }
-    h2 {
-      text-transform: uppercase;
-      font: 400 200px/1 "Public Sans", sans-serif;
-      width:100%;
-      padding-top: 0;
-      margin:0 auto;
-      white-space: nowrap;
-      @media (max-width: 991px) {
-        font-size: 100px;
-      }
-      span {
-        background: linear-gradient(90deg, rgba(220, 68, 244, 1) 30%, rgba(193, 99, 238, 1) 50%, rgba(60, 2, 182, 1) 80%);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        display:inline-block;
-        animation: scrolling-left2 90s linear infinite;
-        animation-delay: 1s;
-        & + span {
-          background: linear-gradient(90deg, rgba(60, 2, 182, 1) 30%, rgba(193, 99, 238, 1) 50%, rgba(220, 68, 244, 1) 80%);
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-        }
-      }
-    }
-  }
-}
 
-/* scrolling-left is continuous/repeatly text */
-@keyframes scrolling-left1 {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes scrolling-left2 {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
-}
 
 .design-experience-text-container {
   z-index: 1;
@@ -816,12 +704,6 @@ footer {
         position: absolute;
         top: -50px;
         left: -42px;
-      }
-      &__img-gradient {
-        position: absolute;
-        top: -204px;
-        left: -215px;
-        max-width: 720px;
       }
       &__img-dots {
         position: absolute;
@@ -951,12 +833,6 @@ footer {
           top: -50px;
           left: auto;
           right: 750px;
-        }
-        &__img-gradient {
-          position: absolute;
-          top: -204px;
-          left: -215px;
-          max-width: 720px;
         }
         &__img-dots {
           position: absolute;
@@ -1212,12 +1088,6 @@ footer {
         position: absolute;
         top: -70px;
         right: 13px;
-      }
-      &__img-gradient {
-        position: absolute;
-        top: -204px;
-        left: -215px;
-        max-width: 720px;
       }
       &__img-dots {
         position: absolute;
@@ -1559,12 +1429,6 @@ footer {
           top: -50px;
           left: auto;
           right: 750px;
-        }
-        &__img-gradient {
-          position: absolute;
-          top: -204px;
-          left: -215px;
-          max-width: 720px;
         }
         &__img-dots {
           position: absolute;
