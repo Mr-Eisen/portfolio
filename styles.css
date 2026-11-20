@@ -125,7 +125,7 @@ article {
 }
 .banner:after {
   content: "";
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+  background-image: url("static/noise.png");
   top: 0;
   left: 0;
   height: 300%;
@@ -490,7 +490,7 @@ footer {
 }
 footer:after {
   content: "";
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+  background-image: url("static/noise.png");
   top: 0;
   left: 0;
   height: 300%;
