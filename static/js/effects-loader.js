@@ -2,7 +2,10 @@
  * Loads the WebGL effects (three.js) only where they can run:
  * - hero: live liquid + 3D rings (hero-3d.js); falls back to the background video;
  * - "PORTFOLIO" title: the glow turns into sand that reacts to the cursor (portfolio-sand.js),
- *   loaded when the section gets near the viewport; without it the section stays as designed.
+ *   loaded when the section gets near the viewport; without it the section stays as designed;
+ * - case studies: CSS 3D depth on the existing layers (case-depth.js); no WebGL needed;
+ * - footer: the hero's live liquid (hero-3d.js, no rings), loaded when the footer gets near
+ *   the viewport; without it the footer keeps its static footer.svg.
  * With "reduce motion" both effects render a single still frame, and the hero
  * fallback shows the poster only.
  */
@@ -59,4 +62,25 @@ if (portfolioTitle && webgl2) {
     { rootMargin: '600px 0px' },
   );
   near.observe(portfolioTitle);
+}
+
+if (document.querySelector('.design-experience')) {
+  import('./case-depth.js')
+    .then(({ initCaseDepth }) => initCaseDepth({ reduceMotion }))
+    .catch(() => {}); // the cases keep their original animation
+}
+
+const footer = document.querySelector('footer');
+if (footer && webgl2) {
+  const nearFooter = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) return;
+      nearFooter.disconnect();
+      import('./hero-3d.js')
+        .then(({ initHero3D }) => initHero3D({ banner: footer, reduceMotion, exposure: 2.2 }))
+        .catch(() => {}); // the footer keeps footer.svg
+    },
+    { rootMargin: '600px 0px' },
+  );
+  nearFooter.observe(footer);
 }
